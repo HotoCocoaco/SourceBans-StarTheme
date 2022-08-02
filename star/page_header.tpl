@@ -40,7 +40,7 @@
 								<form method="get" action="index.php" id="banform">
 									<input type="hidden" name="p" value="banlist" />
 									<a class="dropdown-item">
-										<p class="mb-0 font-weight-normal float-left">Search Bans...
+										<p class="mb-0 font-weight-normal float-left">搜索封禁...
 										</p>
 									</a>
 									<a class="dropdown-item preview-item">
@@ -58,7 +58,7 @@
 								<form method="get" action="index.php" id="commform">
 									<input type="hidden" name="p" value="commslist" />
 									<a class="dropdown-item">
-										<p class="mb-0 font-weight-normal float-left">Search Comms...
+										<p class="mb-0 font-weight-normal float-left">搜索交流阻挡...
 										</p>
 									</a>
 									<a class="dropdown-item preview-item">
@@ -78,7 +78,7 @@
 						{if $logged_in}
 						<li class="nav-item dropdown ">
 							<a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-							<span class="profile-text d-none d-xl-inline-block">Hello, {$username} !</span>
+							<span class="profile-text d-none d-xl-inline-block">你好, {$username} !</span>
 							<img class="img-xs rounded-circle" src='{php} include("./themes/star/photoGET.php");{/php}' alt="profile image">
 							</a>
 							<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
@@ -108,17 +108,17 @@
 								{php}
 								if($userbank->is_admin()){
 								echo '<a class="dropdown-item mt-2" href="index.php?p=admin">
-								Admin Panel
+								管理员面板
 								</a>';}
 								{/php}
 								<a class="dropdown-item" href="index.php?p=account">
-								Manage Account
+								管理账号
 								</a>
 								<a class="dropdown-item" href="index.php?p=account#^1" onclick="SwapPane(1);">
-								Change Password
+								更改密码
 								</a>
 								<a class="dropdown-item" href="index.php?p=logout">
-								Sign Out
+								登出
 								</a>
 							</div>
 						</li>

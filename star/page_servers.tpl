@@ -5,7 +5,7 @@
 				<h4 class="lead">Server List</h4>
 				<div class="table-responsive" id="server_group">
 					{if $IN_SERVERS_PAGE && $access_bans}
-					<div style="text-align:right; width:100%;"><span class="text-muted" style="font-size:12px;">Hint: Rightclick on a player to open a context menu with options to kick, ban or contact the player directly.</span></div>
+					<div style="text-align:right; width:100%;"><span class="text-muted" style="font-size:12px;">提示：右键单击玩家以打开上下文菜单，其中包含踢、禁止或直接联系玩家的选项。</span></div>
 					{/if}
 					<table class="table table-bordered table-striped table-hover tbl-sm">
 						<thead>
@@ -13,9 +13,9 @@
 								<th width="2%" height="16" class="listtable_top">MOD</th>
 								<th width="2%" height="16" class="listtable_top">OS</th>
 								<th width="2%" height="16" class="listtable_top">VAC</th>
-								<th height="16" class="listtable_top" align="center">Hostname</th>
-								<th width="10%" height="16" class="listtable_top">Players</th>
-								<th width="10%" height="16" class="listtable_top">Map</th>
+								<th height="16" class="listtable_top" align="center">主机名</th>
+								<th width="10%" height="16" class="listtable_top">玩家</th>
+								<th width="10%" height="16" class="listtable_top">地图</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -24,7 +24,7 @@
 							<td height="16" align="center"><img src="themes/star/images/games/{$server.icon}" class="img-ss" /></td>
 							<td height="16" align="center" id="os_{$server.sid}"></td>
 							<td height="16" align="center" id="vac_{$server.sid}"></td>
-							<td height="16" id="host_{$server.sid}"><i>Querying Server Data...</i></td>
+							<td height="16" id="host_{$server.sid}"><i>获取服务器数据...</i></td>
 							<td height="16" id="players_{$server.sid}">N/A</td>
 							<td height="16" id="map_{$server.sid}">N/A</td>
 							</tr>
@@ -46,7 +46,7 @@
 														<div align='center'>
 															<p style="font-size: 13px;">{$server.ip}:{$server.port}</p>
 															<input type='submit' onclick="document.location = 'steam://connect/{$server.ip}:{$server.port}'" name='button' class='btn btn-success' style='margin:0px;' id='button' value='Join game' />
-															<input type='button' onclick="ShowBox('Reloading..','<b>Refreshing the Serverdata...</b><br><i>Please Wait!</i>', 'blue', '', false);document.getElementById('dialog-control').setStyle('display', 'none');xajax_RefreshServer({$server.sid});" name='button' class='btn btn-warning' style='margin:0;' id='button' value='Refresh' />
+															<input type='button' onclick="ShowBox('重载中..','<b>刷新服务器数据...</b><br><i>请稍后!</i>', 'blue', '', false);document.getElementById('dialog-control').setStyle('display', 'none');xajax_RefreshServer({$server.sid});" name='button' class='btn btn-warning' style='margin:0;' id='button' value='Refresh' />
 														</div>
 														<br />
 													</td>
@@ -55,12 +55,12 @@
 										</div>
 										<div id="noplayer_{$server.sid}" name="noplayer_{$server.sid}" style="display:none;">
 											<br />
-											<h2 style="color: #333;">No players in the server</h2>
+											<h2 style="color: #333;">服务器内没有玩家</h2>
 											<br />
 											<div align='center'>
 												<p style="font-size: 13px;">{$server.ip}:{$server.port}</p>
 												<input type='submit' onclick="document.location = 'steam://connect/{$server.ip}:{$server.port}'" name='button' class='btn btn-success' style='margin:0;' id='button' value='Join game' />
-												<input type='button' onclick="ShowBox('Reloading..','<b>Refreshing the Serverdata...</b><br><i>Please Wait!</i>', 'blue', '', false);document.getElementById('dialog-control').setStyle('display', 'none');xajax_RefreshServer({$server.sid});" name='button' class='btn btn-warning' style='margin:0;' id='button' value='Refresh' /><br /><br />
+												<input type='button' onclick="ShowBox('重载中..','<b>刷新服务器数据...</b><br><i>请稍后!</i>', 'blue', '', false);document.getElementById('dialog-control').setStyle('display', 'none');xajax_RefreshServer({$server.sid});" name='button' class='btn btn-warning' style='margin:0;' id='button' value='Refresh' /><br /><br />
 											</div>
 										</div>
 									</div>

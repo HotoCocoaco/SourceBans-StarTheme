@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Upload File : SourceBans</title>
+		<title>上传文件 : SourceBans</title>
 		<link rel="Shortcut Icon" href="../images/favicon.ico" />
 	</head>
 	<body bgcolor="e9e9e9" style="
@@ -13,7 +13,7 @@
 		padding: 0px;
 		">
 		<h3>{$title}</h3>
-		Plese select the file to upload. The file must either be {$formats} file format.<br>
+		请选择要上传的文件。该文件必须是 {$formats} 文件格式。<br>
 		<b>{$message}</b>
 		<form action="" method="POST" id="{$form_name}" enctype="multipart/form-data">
 			<input name="upload" value="1" type="hidden">
@@ -24,7 +24,7 @@
 				padding:1px 1px 1px 20px;
 				font-weight: bold;
 				margin: 0 0.5em;
-				background-image: url(../images/save.png);" type="submit">Save</button>
+				background-image: url(../images/save.png);" type="submit">保存</button>
 		</form>
 	</body>
 </html>

@@ -4,8 +4,8 @@
 		<div class="col-lg-12 grid-margin">
 			<div class="card">
 				<div class="card-body">
-					<h3>Your Permissions</h3>
-					<p>The following is a list of the permissions that you have on this system.</p>
+					<h3>你的权限</h3>
+					<p>以下是您在此系统上拥有的权限列表。</p>
 					<br /><br /> <br />
 					<table width="100%" border="0">
 						<tr>
@@ -22,14 +22,14 @@
 		<div class="col-lg-12 grid-margin">
 			<div class="card">
 				<div class="card-body">
-					<h3>Change Password</h3>
+					<h3>更改密码</h3>
 					<div class="table-responsive">
 						<table class="table" id="group.details">
 							<tr>
 								<td valign="top" width="35%">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="We need to know your current password to verify its you."></i>
-										Current Password
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="我们需要知道您当前的密码以验证您的身份。"></i>
+										现密码
 									</div>
 								</td>
 								<td>
@@ -42,8 +42,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Type your new password here.<br /><br /><i>Min Length: -{$min_pass_len}-</i>"></i>
-										New Password
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="在此处输入您的新密码。<br /><br /><i>最小长度: -{$min_pass_len}-</i>"></i>
+										新密码
 									</div>
 								</td>
 								<td>
@@ -56,8 +56,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Please type your new password again to avoid a mistake"></i>
-										Confirm Password
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="请再次输入您的新密码，以免出错"></i>
+										确认密码
 									</div>
 								</td>
 								<td>
@@ -70,8 +70,8 @@
 							<tr>
 								<td>&nbsp;</td>
 								<td>
-									<input type="submit" onclick="xajax_CheckPassword(-{$user_aid}-, $('current').value);dispatch();" name="button" class="btn ok btn-success" id="button" value="Save" />
-									&nbsp; <input type="submit" onclick="history.go(-1)" name="button" class="btn cancel btn-danger" id="button" value="Cancel" />	
+									<input type="submit" onclick="xajax_CheckPassword(-{$user_aid}-, $('current').value);dispatch();" name="button" class="btn ok btn-success" id="button" value="保存" />
+									&nbsp; <input type="submit" onclick="history.go(-1)" name="button" class="btn cancel btn-danger" id="button" value="取消" />
 								</td>
 							</tr>
 						</table>
@@ -85,16 +85,16 @@
 		<div class="col-lg-12 grid-margin">
 			<div class="card">
 				<div class="card-body">
-					<h3>Change Server Password</h3>
-					<p>You will need to specify this password in the game server before you can use your admin rights.<br />Click <a href="http://wiki.alliedmods.net/Adding_Admins_%28SourceMod%29#Passwords" title="SourceMod Password Info" target="_blank"><b>here</b></a> for more infos.</p>
+					<h3>更改服务器密码</h3>
+					<p>您需要在游戏服务器中指定此密码，然后才能使用您的管理员权限。<br />点击 <a href="http://wiki.alliedmods.net/Adding_Admins_%28SourceMod%29#Passwords" title="SourceMod Password Info" target="_blank"><b>这里</b></a> 查看更多信息。</p>
 					<div class="table-responsive">
 						<table class="table" id="group.details">
 							-{if $srvpwset}-
 							<tr>
 								<td valign="top" width="35%">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="We need to know your current password to verify its you."></i>
-										Current Server Password
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="我们需要知道您当前的密码以验证您的身份。"></i>
+										现服务器密码
 									</div>
 								</td>
 								<td>
@@ -112,8 +112,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Type your new server password here. <br /><br /><i>Min Length: -{$min_pass_len}-"></i>
-										New Password
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="这里输入你的新密码 <br /><br /><i>最小长度: -{$min_pass_len}-"></i>
+										新密码
 									</div>
 								</td>
 								<td>
@@ -126,8 +126,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Please type your new server password again to avoid a mistake."></i>
-										Confirm Password
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="请再次输入您的新服务器密码，以免出错。"></i>
+										确认密码
 									</div>
 								</td>
 								<td>
@@ -141,8 +141,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box, if you want to delete your server password"></i>
-										Remove Password
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="如果要删除服务器密码，请选中此框"></i>
+										移除密码
 									</div>
 								</td>
 								<td>
@@ -155,8 +155,8 @@
 							<tr>
 								<td>&nbsp;</td>
 								<td>
-									<input type="submit" onclick="-{if $srvpwset}-xajax_CheckSrvPassword(-{$user_aid}-, $('scurrent').value);-{/if}-srvdispatch();" name="button" class="btn ok btn-success" id="button" value="Save" />
-									&nbsp; <input type="submit" onclick="history.go(-1)" name="button" class="btn cancel btn-danger" id="button" value="Cancel" />	
+									<input type="submit" onclick="-{if $srvpwset}-xajax_CheckSrvPassword(-{$user_aid}-, $('scurrent').value);-{/if}-srvdispatch();" name="button" class="btn ok btn-success" id="button" value="保存" />
+									&nbsp; <input type="submit" onclick="history.go(-1)" name="button" class="btn cancel btn-danger" id="button" value="取消" />
 								</td>
 							</tr>
 						</table>
@@ -170,14 +170,14 @@
 		<div class="col-lg-12 grid-margin">
 			<div class="card">
 				<div class="card-body">
-					<h3>Change E-Mail</h3>
+					<h3>更改电子邮箱</h3>
 					<div class="table-responsive">
 						<table class="table" id="group.details">
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="This is your current saved E-mail address."></i>
-										Current E-Mail
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="这是您当前保存的电子邮件地址。"></i>
+										当前的电子邮箱
 									</div>
 								</td>
 								<td>
@@ -187,8 +187,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type your password here."></i>
-										Password
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="输入你的密码。"></i>
+									密码
 									</div>
 								</td>
 								<td>
@@ -201,8 +201,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type your new email address here."></i>
-										New E-mail
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="在此处输入您的新电子邮件地址。"></i>
+										新的电子邮箱
 									</div>
 								</td>
 								<td>
@@ -215,8 +215,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Please type your new email address again to avoid a mistake."></i>
-										Confirm E-mail
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="请再次输入您的新电子邮件地址，以免出错。"></i>
+										确认电子邮箱
 									</div>
 								</td>
 								<td>
@@ -229,8 +229,8 @@
 							<tr>
 								<td>&nbsp;</td>
 								<td>
-									<input type="submit" onclick="checkmail();" name="button" class="btn ok btn-success" id="button" value="Save" />
-									&nbsp; <input type="submit" onclick="history.go(-1)" name="button" class="btn cancel btn-danger" id="button" value="Cancel" />	
+									<input type="submit" onclick="checkmail();" name="button" class="btn ok btn-success" id="button" value="保存" />
+									&nbsp; <input type="submit" onclick="history.go(-1)" name="button" class="btn cancel btn-danger" id="button" value="取消" />
 								</td>
 							</tr>
 						</table>
@@ -248,11 +248,11 @@
 		function checkYourAcctPass()
 			{
 				var err = 0;
-				
+
 				if($('pass1').value.length < -{$min_pass_len}-)
 				{
 					$('pass1.msg').setStyle('display', 'block');
-					$('pass1.msg').setHTML('Your password must be atleast -{$min_pass_len}- letters long');
+					$('pass1.msg').setHTML('您的密码必须至少为 -{$min_pass_len}- 字符长度');
 					err++;
 				}
 				else
@@ -260,9 +260,9 @@
 					$('pass1.msg').setStyle('display', 'none');
 				}
 				if($('pass2').value != "" && $('pass2').value != $('pass1').value)
-				{	
+				{
 					$('pass2.msg').setStyle('display', 'block');
-					$('pass2.msg').setHTML('Your passwords dont match');
+					$('pass2.msg').setHTML('你的密码不匹配');
 					err++;
 				}else{
 					$('pass2.msg').setStyle('display', 'none');
@@ -276,11 +276,11 @@
 				{
 					set_error(0);
 					return true;
-				}	
+				}
 			}
 			function dispatch()
 			{
-				if($('current.msg').innerHTML == "Incorrect password.")
+				if($('current.msg').innerHTML == "密码错误。")
 				{
 					alert("Incorrect Password");
 					return false;
@@ -295,11 +295,11 @@
 				if(!$('delspass') || $('delspass').checked == false)
 				{
 					var err = 0;
-					
+
 					if($('spass1').value.length < -{$min_pass_len}-)
 					{
 						$('spass1.msg').setStyle('display', 'block');
-						$('spass1.msg').setHTML('Your password must be atleast -{$min_pass_len}- letters long');
+						$('spass1.msg').setHTML('您的密码必须至少为 -{$min_pass_len}- 字符长度');
 						err++;
 					}
 					else
@@ -307,9 +307,9 @@
 						$('spass1.msg').setStyle('display', 'none');
 					}
 					if($('spass2').value != "" && $('spass2').value != $('spass1').value)
-					{	
+					{
 						$('spass2.msg').setStyle('display', 'block');
-						$('spass2.msg').setHTML('Your passwords dont match');
+						$('spass2.msg').setHTML('你的密码不匹配');
 						err++;
 					}else{
 						$('spass2.msg').setStyle('display', 'none');
@@ -323,18 +323,18 @@
 					{
 						set_error(0);
 						return true;
-					}	
+					}
 				}
 				else
 				{
 					set_error(0);
 					return true;
-				}	
+				}
 			}
 			function srvdispatch()
 			{
 				-{if $srvpwset}-
-				if($('scurrent.msg').innerHTML == "Incorrect password.")
+				if($('scurrent.msg').innerHTML == "密码错误。")
 				{
 					alert("Incorrect Password");
 					return false;
@@ -355,37 +355,37 @@
 		        if($('email1').value == "")
 		        {
 		            $('email1.msg').setStyle('display', 'block');
-					$('email1.msg').setHTML('Please type the new E-mail.');
+					$('email1.msg').setHTML('请输入你的新电子邮件地址');
 					err++;
 				}else{
 					$('email1.msg').setStyle('display', 'none');
 				}
-		        
+
 		        if($('email2').value == "")
 		        {
 		            $('email2.msg').setStyle('display', 'block');
-					$('email2.msg').setHTML('Please retype the new E-mail.');
+					$('email2.msg').setHTML('请重新输入你的新电子邮件地址');
 					err++;
 				}else{
 					$('email2.msg').setStyle('display', 'none');
 				}
-		         
+
 				if(err == 0 && $('email2').value != $('email1').value)
-				{	
+				{
 					$('email2.msg').setStyle('display', 'block');
-					$('email2.msg').setHTML('The typed E-mails doesn\'t match.');
+					$('email2.msg').setHTML('输入的电子邮箱不匹配');
 					err++;
 				}
-		        
+
 		        if($('emailpw').value == "")
 		        {
 		            $('emailpw.msg').setStyle('display', 'block');
-					$('emailpw.msg').setHTML('Please type your password.');
+					$('emailpw.msg').setHTML('请输入你的密码');
 					err++;
 				}else{
 					$('emailpw.msg').setStyle('display', 'none');
 				}
-		        
+
 				if(err > 0)
 				{
 					set_error(1);

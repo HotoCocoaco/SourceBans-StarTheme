@@ -5,16 +5,16 @@ Access Denied!
 	<div class="col-lg-12 grid-margin">
 		<div class="card">
 			<div class="card-body">
-				<h3>Groups</h3>
-				<p>Click on a group to view its permissions.</p>
+				<h3>组</h3>
+				<p>单击一个组以查看其权限。</p>
 				<br /><br />
 				<!-- Web Admin Groups -->
 				<div class="table-responsive" id="wag_collapseGroup">
-					Web Admin Groups <i class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;">Total: {$web_group_count}</i>
+					网页管理员组 <i class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;">总计: {$web_group_count}</i>
 					<table class="table">
 						<thead>
 							<tr>
-								<th width="40%">Group Name</th>
+								<th width="40%">组名字</th>
 								<th width="25%">Admins in group</th>
 								<th width="30%">Action</th>
 							</tr>
@@ -23,12 +23,12 @@ Access Denied!
 						<tr style="cursor:pointer;" data-toggle="collapse" data-target="#wad_{$group.gid}" aria-expanded="false" aria-controls="collapseExample">
 							<td>{$group.name}</td>
 							<td>{$web_admins[$smarty.foreach.web_group.index]}</td>
-							<td> 
+							<td>
 								{if $permission_editgroup}
-								<a href="index.php?p=admin&c=groups&o=edit&type=web&id={$group.gid}">Edit</a>
+								<a href="index.php?p=admin&c=groups&o=edit&type=web&id={$group.gid}">编辑</a>
 								{/if}
 								{if $permission_deletegroup}
-								- <a href="#" onclick="RemoveGroup({$group.gid}, '{$group.name}', 'web');">Delete</a>
+								- <a href="#" onclick="RemoveGroup({$group.gid}, '{$group.name}', 'web');">删除</a>
 								{/if}
 							</td>
 						</tr>
@@ -38,23 +38,23 @@ Access Denied!
 									<table class="table tbl-sm">
 										<thead>
 											<tr>
-												<th align="left" colspan="3">Group Details</th>
+												<th align="left" colspan="3">组详情</th>
 											</tr>
 										</thead>
 										<tr align="left">
-											<td width="20%" >Permissions</td>
+											<td width="20%" >权限</td>
 											<td >{$group.permissions|replace:"&bull;":"<span style=\"color:#1b75d1;\">&bull;</span>"}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" >Members</td>
+											<td width="20%" >成员</td>
 											<td >
 												<table width="100%" cellspacing="0" cellpadding="0" class="listtable">
 													{foreach from=$web_admins_list[$smarty.foreach.web_group.index] item="web_admin"}
 													<tr>
 														<td >{$web_admin.user}</td>
 														{if $permission_editadmin}
-														<td width="30%" ><a href="index.php?p=admin&c=admins&o=editgroup&id={$web_admin.aid}" title="Edit Groups">Edit</a>
-															- <a href="index.php?p=admin&c=admins&o=editgroup&id={$web_admin.aid}&wg=" title="Remove From Group">Remove</a>
+														<td width="30%" ><a href="index.php?p=admin&c=admins&o=editgroup&id={$web_admin.aid}" title="编辑组">编辑</a>
+															- <a href="index.php?p=admin&c=admins&o=editgroup&id={$web_admin.aid}&wg=" title="从组移除">删除</a>
 														</td>
 														{/if}
 													</tr>
@@ -72,25 +72,25 @@ Access Denied!
 				<br /><br />
 				<!-- Server Admin Groups -->
 				<div class="table-responsive" id="sag_collapseGroup">
-					Server Admin Groups <i class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;">Total: {$server_admin_group_count}</i>
+					服务器管理员组 <i class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;">总计: {$server_admin_group_count}</i>
 					<table class="table">
 						<thead>
 							<tr>
-								<th width="40%">Group Name</th>
-								<th width="25%">Admins in group</th>
-								<th width="30%">Action</th>
+								<th width="40%">组名字</th>
+								<th width="25%">组中管理员</th>
+								<th width="30%">行动</th>
 							</tr>
 						</thead>
 						{foreach from="$server_group_list" item="group" name="server_admin_group"}
 						<tr style="cursor:pointer;" data-toggle="collapse" data-target="#sag_{$group.id}" aria-expanded="false" aria-controls="collapseExample">
 							<td>{$group.name}</td>
 							<td>{$server_admins[$smarty.foreach.server_admin_group.index]}</td>
-							<td> 
+							<td>
 								{if $permission_editgroup}
-								<a href="index.php?p=admin&c=groups&o=edit&type=srv&id={$group.id}">Edit</a>
+								<a href="index.php?p=admin&c=groups&o=edit&type=srv&id={$group.id}">编辑</a>
 								{/if}
 								{if $permission_deletegroup}
-								- <a href="#" onclick="RemoveGroup({$group.id}, '{$group.name}', 'srv');">Delete</a>
+								- <a href="#" onclick="RemoveGroup({$group.id}, '{$group.name}', 'srv');">删除</a>
 								{/if}
 							</td>
 						</tr>
@@ -100,23 +100,23 @@ Access Denied!
 									<table class="table tbl-sm">
 										<tr>
 											<td align="left" colspan="3">
-												Group Details          
+												组详情
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" >Permissions</td>
+											<td width="20%" >权限</td>
 											<td >{$group.permissions|replace:"&bull;":"<span style=\"color:#1b75d1;\">&bull;</span>"}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" >Members</td>
+											<td width="20%" >成员</td>
 											<td >
 												<table width="100%" cellspacing="0" cellpadding="0" class="listtable">
 													{foreach from=$server_admins_list[$smarty.foreach.server_admin_group.index] item="server_admin"}
 													<tr>
 														<td>{$server_admin.user}</td>
 														{if $permission_editadmin}
-														<td width="30%" ><a href="index.php?p=admin&c=admins&o=editgroup&id={$server_admin.aid}" title="Edit Groups">Edit</a>
-															- <a href="index.php?p=admin&c=admins&o=editgroup&id={$server_admin.aid}&sg=" title="Remove From Group">Remove</a>
+														<td width="30%" ><a href="index.php?p=admin&c=admins&o=editgroup&id={$server_admin.aid}" title="编辑组">编辑</a>
+															- <a href="index.php?p=admin&c=admins&o=editgroup&id={$server_admin.aid}&sg=" title="从组移除">移除</a>
 														</td>
 														{/if}
 													</tr>
@@ -129,9 +129,9 @@ Access Denied!
 											<td >
 												<table width="100%" cellspacing="0" cellpadding="0" class="listtable">
 													<tr>
-														<td>Type</td>
-														<td>Name</td>
-														<td>Access</td>
+														<td>类型</td>
+														<td>名称</td>
+														<td>访问权</td>
 													</tr>
 													{foreach from=$server_overrides_list[$smarty.foreach.server_admin_group.index] item="override"}
 													<tr>
@@ -153,26 +153,26 @@ Access Denied!
 				<br /><br />
 				<!-- Server Groups -->
 				<div class="table-responsive" id="sg_collapseGroup">
-					Server Groups <i class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;">Total: {$server_group_count}</i>
+					服务器组 <i class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;">总计: {$server_group_count}</i>
 					<table class="table">
 						<thead>
 							<tr>
-								<th width="40%">Group Name</th>
-								<th width="25%">Servers in group</th>
-								<th width="30%">Action</th>
+								<th width="40%">组名字</th>
+								<th width="25%">组内服务器</th>
+								<th width="30%">行动</th>
 							</tr>
 						</thead>
 						{foreach from="$server_list" item="group" name="server_group"}
 						<tr style="cursor:pointer;" data-toggle="collapse" data-target="#sg_{$group.gid}" aria-expanded="false" aria-controls="collapseExample">
 							<td>{$group.name}</td>
 							<td>{$server_counts[$smarty.foreach.server_group.index]}</td>
-							<td>   
+							<td>
 								{if $permission_editgroup}
-								<a href="index.php?p=admin&c=groups&o=edit&type=server&id={$group.gid}">Edit</a>
+								<a href="index.php?p=admin&c=groups&o=edit&type=server&id={$group.gid}">编辑</a>
 								{/if}
 								{if $permission_deletegroup}
-								- <a href="#" onclick="RemoveGroup({$group.gid}, '{$group.name}', 'server');">Delete</a>
-								{/if}        
+								- <a href="#" onclick="RemoveGroup({$group.gid}, '{$group.name}', 'server');">删除</a>
+								{/if}
 							</td>
 						</tr>
 						<tr>
@@ -180,12 +180,12 @@ Access Denied!
 								<div class="collapse col-sm-9" id="sg_{$group.gid}"  data-parent="#sg_collapseGroup">
 									<table class="table tbl-sm">
 										<tr>
-											<td align="left" colspan="3">Servers in this group</td>
+											<td align="left" colspan="3">组内服务器</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" >Server Names</td>
+											<td width="20%" >服务器名字</td>
 											<td  id="servers_{$group.gid}">
-												Please Wait!
+												请稍后!
 											</td>
 										</tr>
 									</table>

@@ -48,7 +48,7 @@ Access Denied!
 						<tr>
 							<td>
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选择要阻止的内容 - 聊天或语音"></i>
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选择要阻挡的内容 - 聊天或语音"></i>
 									阻挡种类
 								</div>
 							</td>

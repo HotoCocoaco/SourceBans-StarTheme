@@ -5,21 +5,21 @@
 				<div class="card">
 					<div class="card-body" id="add-group">
 						<h3>管理员组</h3>
-						<p>For more information or help regarding a certain subject move your mouse over the question mark.<br /><br />
-							Choose the new groups that you want <b>{$group_admin_name}</b> to appear in.
+						<p>有关特定主题的更多信息或帮助，请将鼠标移到问号上。<br /><br />
+							选择您希望 <b>{$group_admin_name}</b> 出现的新组。
 						</p>
 						<br /><br />
 						<div class="table-responsive">
 							<table class="table" id="group.details">
 								<tr>
 									<td valign="middle">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Choose the group you want this admin to appear in for web permissions"></i>
-										Web Admin Group
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选择您希望此管理员出现的组以获得网页权限"></i>
+										网页管理员组
 									</td>
 									<td>
 										<div align="left" id="wadmingroup">
 											<select name="wg" id="wg" class="form-control">
-												<option value="-1">No Group</option>
+												<option value="-1">没有组</option>
 												<optgroup label="Groups" style="font-weight:bold;">
 													{foreach from=$web_lst item=wg}
 													<option value="{$wg.gid}"{if $wg.gid == $group_admin_id} selected="selected"{/if}>{$wg.name}</option>
@@ -34,13 +34,13 @@
 								</tr>
 								<tr>
 									<td valign="middle">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Choose the group you want this admin to appear in for server admin permissions"></i>
-										Server Admin Group
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选择您希望此管理员出现的组以获得服务器管理员权限"></i>
+										服务器管理员组
 									</td>
 									<td>
 										<div align="left" id="wadmingroup">
 											<select name="sg" id="sg" class="form-control">
-												<option value="-1">No Group</option>
+												<option value="-1">没有组</option>
 												<optgroup label="Groups" style="font-weight:bold;">
 													{foreach from=$group_lst item=sg}
 													<option value="{$sg.id}"{if $sg.id == $server_admin_group_id} selected="selected"{/if}>{$sg.name}</option>
@@ -54,9 +54,9 @@
 								<tr>
 									<td>&nbsp;</td>
 									<td>
-										{sb_button text="Save Changes" class="ok" id="agroups" submit=true}
+										{sb_button text="保存更改" class="ok" id="agroups" submit=true}
 										&nbsp;
-										{sb_button text="Back" onclick="history.go(-1)" class="cancel" id="aback"}
+										{sb_button text="返回" onclick="history.go(-1)" class="cancel" id="aback"}
 									</td>
 								</tr>
 							</table>

@@ -5,15 +5,15 @@ Access Denied!
 	<div class="col-lg-12 grid-margin">
 		<div class="card">
 			<div class="card-body">
-				<h3>Add Mod</h3>
-				<p>For more information or help regarding a certain subject move your mouse over the question mark.</p>
+				<h3>增加Mod</h3>
+				<p>有关特定主题的更多信息或帮助，请将鼠标移到问号上。</p>
 				<div class="table-responsive">
 					<table class="table table-striped" id="group.details" cellpadding="3">
 						<tr>
 							<td valign="top" width="35%">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type the name of the mod you are adding."></i>
-									Mod Name 
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="输入您要添加的 Mod 的名称。"></i>
+									Mod 名称
 								</div>
 							</td>
 							<td>
@@ -27,8 +27,8 @@ Access Denied!
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type the name of this mods folder. For example, Counter-Strike: Source's mod folder is 'cstrike'"></i>
-									Mod Folder 
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="输入此 mods 文件夹的名称。 例如 Counter-Strike: Source 的 mod 文件夹是 'cstrike'"></i>
+									Mod 文件夹
 								</div>
 							</td>
 							<td>
@@ -40,7 +40,7 @@ Access Denied!
 						</tr>
 						<tr>
 							<td valign="top">
-								<div class="rowdesc"><i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="(STEAM_<b>X</b>:Y:Z) Some games display the steamid differently than others. Type the first number in the SteamID (<b>X</b>) depending on how it's rendered by this mod. (Default: 0)."></i>Steam Universe Number</div>
+								<div class="rowdesc"><i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="(STEAM_<b>X</b>:Y:Z) 有些游戏显示 steamid 的方式与其他游戏不同。输入 SteamID 中的第一个数字 (<b>X</b>) 取决于它是如何被这个mod显示的。 (默认: 0)."></i>Steam 宇宙编号</div>
 							</td>
 							<td>
 								<div align="left">
@@ -51,7 +51,7 @@ Access Denied!
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Select if this mod is enabled and assignable to bans and servers."></i>Enabled
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选择此模组是否已启用并可分配给封禁和服务器。"></i>启用
 								</div>
 							</td>
 							<td>
@@ -69,21 +69,21 @@ Access Denied!
 						<tr>
 							<td valign="top" width="35%">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Click here to upload an icon to associate with this mod."></i>Upload Icon
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="单击此处上传与此 mod 关联的图标。"></i>上传图标
 								</div>
 							</td>
 							<td>
 								<div align="left">
-									{sb_button text="Upload Mod Icon" onclick="childWindow=open('pages/admin.uploadicon.php','upload','resizable=yes,width=300,height=130');" class="save" id="upload"}
+									{sb_button text="上传 Mod 图标" onclick="childWindow=open('pages/admin.uploadicon.php','upload','resizable=yes,width=300,height=130');" class="save" id="upload"}
 								</div>
 								<div id="icon.msg" style="color:#CC0000;"></div>
 							</td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
-							<td>		
-								{sb_button text="Add Mod" onclick="ProcessMod();" class="ok" id="amod"}&nbsp;
-								{sb_button text="Back" onclick="history.go(-1)" class="cancel" id="aback"}      
+							<td>
+								{sb_button text="增加mod" onclick="ProcessMod();" class="ok" id="amod"}&nbsp;
+								{sb_button text="返回" onclick="history.go(-1)" class="cancel" id="aback"}
 							</td>
 						</tr>
 					</table>

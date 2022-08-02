@@ -6,6 +6,9 @@
 				<a href="https://sbpp.github.io/" target="_blank">SourceBans++</a> {$SB_VERSION}{$SB_REV}.
 				Powered by <a href="http://www.sourcemod.net" target="_blank">SourceMod</a>
 				</span><br>
+				<span class="d-block text-center text-sm-left d-sm-inline-block">
+				汉化：热可可
+				</span><br>
 				<span class="d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
 				<a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
 				<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-right">Hand-crafted & made with

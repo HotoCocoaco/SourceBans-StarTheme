@@ -3,7 +3,7 @@
 		<div class="auto-form-wrapper py-3 p-lg-4" id="login-content">
 			-{if $steamlogin_show == 1}-
 			<div class="form-group">
-				<label class="label">Username</label>
+				<label class="label">用户名</label>
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Username" id="loginUsername" name="username">
 					<div class="input-group-append">
@@ -15,7 +15,7 @@
 				<label id="loginUsername.msg" class="label"></label>
 			</div>
 			<div class="form-group">
-				<label class="label">Password</label>
+				<label class="label">密码</label>
 				<div class="input-group">
 					<input type="password" class="form-control" id="loginPassword" name="password" placeholder="*********">
 					<div class="input-group-append">
@@ -31,10 +31,10 @@
 			<div class="form-group d-flex justify-content-between">
 				<div class="form-check" id="loginRememberMeDiv">
 					<label class="form-check-label">
-					<input id="loginRememberMe" type="checkbox" name="remember" value="checked" vspace="5px" class="form-check-input" checked=""> Keep me signed in
+					<input id="loginRememberMe" type="checkbox" name="remember" value="checked" vspace="5px" class="form-check-input" checked=""> 记住我
 					<i class="input-helper"></i></label>
 				</div>
-				<a href="index.php?p=lostpassword" class="text-small forgot-password text-black">Forgot Password</a>
+				<a href="index.php?p=lostpassword" class="text-small forgot-password text-black">忘记密码</a>
 			</div>
 			-{/if}-
 			<div class="form-group text-center">

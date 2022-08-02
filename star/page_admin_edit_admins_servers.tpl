@@ -4,19 +4,19 @@
 			<div class="col-lg-12 grid-margin">
 				<div class="card">
 					<div class="card-body" id="add-group">
-						<h3>Admin Server Access</h3>
-						<p>Please select the servers and/or groups of servers you want this admin to have access to.</p>
+						<h3>管理服务器访问</h3>
+						<p>请选择您希望此管理员有权访问的服务器和/或服务器组。</p>
 						<br /><br />
 						<div class="table-responsive">
 							<table class="table">
 								{if $row_count < 1}
 								<tr>
-									<td colspan="3" class=""><i>You need to add a server or a server group, before you can setup admin server permissions</i></td>
+									<td colspan="3" class=""><i>您需要添加服务器或服务器组，然后才能设置管理员服务器权限</i></td>
 								</tr>
 								{else}
 								<thead>
 									<tr>
-										<th colspan="3">Server Groups</th>
+										<th colspan="3">服务器组</th>
 									</tr>
 								</thead>
 								{foreach from="$group_list" item="group"}
@@ -33,12 +33,12 @@
 								{/foreach}
 								<thead>
 									<tr>
-										<th colspan="3">Servers</th>
+										<th colspan="3">服务器</th>
 									</tr>
 								</thead>
 								{foreach from="$server_list" item="server"}
 								<tr class="tablerow1">
-									<td colspan="2" class="tablerow1" id="host_{$server.sid}">Please Wait...</td>
+									<td colspan="2" class="tablerow1" id="host_{$server.sid}">请稍后...</td>
 									<td align="center" class="tablerow1">
 										<div class="form-check">
 											<label class="form-check-label">
@@ -55,10 +55,10 @@
 								<tr>
 									<td align="center">
 										{if $row_count > 0}
-										{sb_button text="Save Changes" class="ok" id="editadminserver" submit=true}
+										{sb_button text="保存更改" class="ok" id="editadminserver" submit=true}
 										&nbsp;
 										{/if}
-										{sb_button text="Back" onclick="history.go(-1)" class="cancel" id="aback"}
+										{sb_button text="返回" onclick="history.go(-1)" class="cancel" id="aback"}
 									</td>
 								</tr>
 							</table>

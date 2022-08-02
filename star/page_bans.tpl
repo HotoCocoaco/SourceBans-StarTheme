@@ -7,7 +7,7 @@
 				<table id="group.details" class="table">
 					<tr>
 						<td valign="top">
-							<div class="rowdesc"><i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type the text you would like to say."></i> Comment</div>
+							<div class="rowdesc"><i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="输入您想说的文字。"></i> 评论</div>
 						</td>
 					</tr>
 					<tr>
@@ -28,8 +28,8 @@
 							<input type="hidden" name="cid" id="cid" value="-1">
 							{/if}
 							<input type="hidden" name="page" id="page" value="{$page}">
-							{sb_button text="$commenttype Comment" onclick="ProcessComment();" class="ok btn-success" id="acom" submit=false}&nbsp;
-							{sb_button text="Back" onclick="history.go(-1)" class="cancel btn-danger" id="aback"}
+							{sb_button text="$commenttype 评论" onclick="ProcessComment();" class="ok btn-success" id="acom" submit=false}&nbsp;
+							{sb_button text="返回" onclick="history.go(-1)" class="cancel btn-danger" id="aback"}
 						</td>
 					</tr>
 					{foreach from="$othercomments" item="com"}
@@ -48,7 +48,7 @@
 					{if $com.editname != ''}
 					<tr>
 						<td colspan='3'>
-							<span style='font-size:6pt;color:grey;'>last edit {$com.edittime} by {$com.editname}</span>
+							<span style='font-size:6pt;color:grey;'>最后编辑于 {$com.edittime} 由 {$com.editname}</span>
 						</td>
 					</tr>
 					{/if}
@@ -63,26 +63,26 @@
 	<div class="col-lg-12 grid-margin">
 		<div class="card">
 			<div class="card-body">
-				<h4 class="lead">Banlist Overview <a class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;" href="index.php?p=banlist&hideinactive={if $hidetext == 'Hide'}true{else}false{/if}{$searchlink|htmlspecialchars}" title="{$hidetext} Inactive">{$hidetext} Inactive</a></h4>
-				<p>Total Bans: {$total_bans}</p>
+				<h4 class="lead">Banlist Overview <a class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;" href="index.php?p=banlist&hideinactive={if $hidetext == 'Hide'}true{else}false{/if}{$searchlink|htmlspecialchars}" title="{$hidetext} Inactive">{$hidetext} 不活跃</a></h4>
+				<p>总计封禁: {$total_bans}</p>
 				{php} require (TEMPLATES_PATH . "/admin.bans.search.php");{/php}
 				{php} $pageName="bans"; include("./themes/star/progressBansComms.php");{/php}
 				<div id="banlist" class="table-responsive">
 					<div class="col-12 my-2 text-xl-right text-lg-left">
 						<div id="banlist-nav" class="btn btn-inverse-light  btn-rounded btn-fw p-1 p-md-2 p-xl-2">
-							{$ban_nav|replace:'|':''}  {if $view_bans} 
-							<button type="button" class="btn btn-outline-primary btn-rounded btn-fw" style="height:24px;padding: 2px 10px; min-width:85px;" 
-								onclick="TickSelectAll();return false;" title="Select All" name="tickswitchlink2" id="tickswitchlink2">Select All</button>
+							{$ban_nav|replace:'|':''}  {if $view_bans}
+							<button type="button" class="btn btn-outline-primary btn-rounded btn-fw" style="height:24px;padding: 2px 10px; min-width:85px;"
+								onclick="TickSelectAll();return false;" title="Select All" name="tickswitchlink2" id="tickswitchlink2">选择全部</button>
 							{/if}
 							{if $general_unban || $can_delete}
 							<select name="bulk_action" id="bulk_action" onchange="BulkEdit(this,'{$admin_postkey}');" class="btn btn-outline-primary btn-rounded btn-fw"
 								style="min-width: auto; height: 24px; padding: 0px 12px;">
-								<option value="-1">Action</option>
+								<option value="-1">行动</option>
 								{if $general_unban}
-								<option value="U">Unban</option>
+								<option value="U">解封</option>
 								{/if}
 								{if $can_delete}
-								<option value="D">Delete</option>
+								<option value="D">删除</option>
 								{/if}
 							</select>
 							{/if}
@@ -99,17 +99,17 @@
 									</button>
 								</th>
 								{/if}
-								<th width="12%" class="text-center">MOD/Country</th>
-								<th width="14%" class="text-center">Date</th>
+								<th width="12%" class="text-center">MOD/地区</th>
+								<th width="14%" class="text-center">日期</th>
 								<th>Player</th>
 								{if !$hideadminname}
 								<th width="15%">Admin</th>
 								{/if}
 								{if $list_progress}
-								<th width="10%" class="text-right">Length</th>
-								<th width="200px" class="text-center">Remaining Progress</th>
+								<th width="10%" class="text-right">时长</th>
+								<th width="200px" class="text-center">剩余进度</th>
 								{else}
-								<th width="10%" class="text-center">Length</th>
+								<th width="10%" class="text-center">时长</th>
 								{/if}
 							</tr>
 						</thead>
@@ -134,7 +134,7 @@
 						<td>
 							<div style="float:left;">
 								{if empty($ban.player)}
-								<i><font color="#677882">no nickname present</font></i>
+								<i><font color="#677882">无昵称</font></i>
 								{else}
 								{$ban.player|escape:'html'|stripslashes}
 								{/if}
@@ -197,14 +197,14 @@
 									<table class="table tbl-sm" width="100%">
 										<tr>
 											<td align="left" class="listtable_top" colspan="3">
-												<b>Ban Details</b>
+												<b>封禁详情</b>
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="30%" >Player</td>
+											<td width="30%" >玩家</td>
 											<td >
 												{if empty($ban.player)}
-												<i><font color="#677882">no nickname present</font></i>
+												<i><font color="#677882">无昵称</font></i>
 												{else}
 												{$ban.player|escape:'html'|stripslashes}
 												{/if}
@@ -261,7 +261,7 @@
 											<td width="20%" >Steam ID</td>
 											<td >
 												{if empty($ban.steamid)}
-												<i><font color="#677882">No Steam ID present</font></i>
+												<i><font color="#677882">无 Steam ID</font></i>
 												{else}
 												{$ban.steamid}
 												{/if}
@@ -271,7 +271,7 @@
 											<td width="20%" >Steam3 ID</td>
 											<td >
 												{if empty($ban.steamid)}
-												<i><font color="#677882">No Steam3 ID present</font></i>
+												<i><font color="#677882">无 Steam3 ID</font></i>
 												{else}
 												<a href="http://steamcommunity.com/profiles/{$ban.steamid3}" target="_blank">{$ban.steamid3}</a>
 												{/if}
@@ -285,10 +285,10 @@
 										{/if}
 										{if !$hideplayerips}
 										<tr align="left">
-											<td width="20%" >IP address</td>
+											<td width="20%" >IP 地址</td>
 											<td >
 												{if $ban.ip == "none"}
-												<i><font color="#677882">no IP address present</font></i>
+												<i><font color="#677882">无 IP 地址</font></i>
 												{else}
 												{$ban.ip|replace:'images':'themes/star/images'|replace:'jpg':'png'|replace:'alt=':'class="img-ss" alt='}
 												{/if}
@@ -296,80 +296,80 @@
 										</tr>
 										{/if}
 										<tr align="left">
-											<td width="20%" >Invoked on</td>
+											<td width="20%" >调用于</td>
 											<td >{$ban.ban_date}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" >Banlength</td>
+											<td width="20%" >封禁时长</td>
 											<td >{$ban.banlength}</td>
 										</tr>
 										{if $ban.unbanned}
 										<tr align="left">
-											<td width="20%" >Unban reason</td>
+											<td width="20%" >解封原因</td>
 											<td >
 												{if $ban.ureason == ""}
-												<i><font color="#677882">no reason present</font></i>
+												<i><font color="#677882">无原因</font></i>
 												{else}
 												{$ban.ureason}
 												{/if}
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" >Unbanned by Admin</td>
+											<td width="20%" >解封管理员</td>
 											<td >
 												{if !empty($ban.removedby)}
 												{$ban.removedby|escape:'html'}
 												{else}
-												<i><font color="#677882">Admin deleted.</font></i>
+												<i><font color="#677882">管理员已删除。</font></i>
 												{/if}
 											</td>
 										</tr>
 										{/if}
 										<tr align="left">
-											<td width="20%" >Expires on</td>
+											<td width="20%" >过期于</td>
 											<td >
 												{if $ban.expires == "never"}
-												<i><font color="#677882">Not applicable.</font></i>
+												<i><font color="#677882">不适用。</font></i>
 												{else}
 												{$ban.expires}
 												{/if}
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" >Reason</td>
+											<td width="20%" >原因</td>
 											<td >{$ban.reason|escape:'html'}</td>
 										</tr>
 										{if !$hideadminname}
 										<tr align="left">
-											<td width="20%" >Banned by Admin</td>
+											<td width="20%" >封禁管理员</td>
 											<td >
 												{if !empty($ban.admin)}
 												{$ban.admin|escape:'html'}
 												{else}
-												<i><font color="#677882">Admin deleted.</font></i>
+												<i><font color="#677882">管理员已删除。</font></i>
 												{/if}
 											</td>
 										</tr>
 										{/if}
 										<tr align="left">
-											<td width="20%" >Banned from</td>
+											<td width="20%" >被封于</td>
 											<td  {if $ban.server_id != 0} id="host_{$ban.ban_id}"{/if}>
 											{if $ban.server_id == 0}
-											Web Ban
+											网页封禁
 											{else}
-											Please Wait...
+											请稍后...
 											{/if}
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" >Total Bans</td>
+											<td width="20%" >总计封禁</td>
 											<td >{$ban.prevoff_link}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" >Blocked ({$ban.blockcount})</td>
+											<td width="20%" >阻挡 ({$ban.blockcount})</td>
 											<td >
 												{if $ban.banlog == ""}
-												<i><font color="#677882">never</font></i>
+												<i><font color="#677882">从未</font></i>
 												{else}
 												{$ban.banlog}
 												{/if}
@@ -377,7 +377,7 @@
 										</tr>
 										{if $view_comments}
 										<tr align="left">
-											<td width="20%" >Comments</td>
+											<td width="20%" >评论</td>
 											<td  colspan="2">
 												{if $ban.commentdata != "None"}
 												<table width="100%" border="0">
@@ -394,7 +394,7 @@
 															{if !empty($commenta.comname)}
 															<b>{$commenta.comname|escape:'html'}</b>
 															{else}
-															<i><font color="#677882">Admin deleted</font></i>
+															<i><font color="#677882">管理员已删除。</font></i>
 															{/if}
 														</td>
 														<td align="right">
@@ -414,7 +414,7 @@
 													{if !empty($commenta.edittime)}
 													<tr>
 														<td colspan='3'>
-															<span style="font-size:6pt;color:grey;">last edit {$commenta.edittime} by {if !empty($commenta.editname)}{$commenta.editname}{else}<i><font color="#677882">Admin deleted</font></i>{/if}</span>
+															<span style="font-size:6pt;color:grey;">最后编辑于 {$commenta.edittime} 由 {if !empty($commenta.editname)}{$commenta.editname}{else}<i><font color="#677882">管理员已删除</font></i>{/if}</span>
 														</td>
 													</tr>
 													{/if}
@@ -436,19 +436,19 @@
 					</table>
 					<div class="col-12 my-2 text-xl-right text-lg-left">
 						<div id="banlist-nav" class="btn btn-inverse-light  btn-rounded btn-fw p-1 p-md-2 p-xl-2">
-							{$ban_nav}  {if $view_bans} | 
-							<button type="button" class="btn btn-outline-primary btn-rounded btn-fw" style="height:24px;padding: 2px 10px; min-width:85px;" 
-								onclick="TickSelectAll();return false;" title="Select All" name="tickswitchlink" id="tickswitchlink">Select All</button>
+							{$ban_nav}  {if $view_bans} |
+							<button type="button" class="btn btn-outline-primary btn-rounded btn-fw" style="height:24px;padding: 2px 10px; min-width:85px;"
+								onclick="TickSelectAll();return false;" title="Select All" name="tickswitchlink" id="tickswitchlink">选择全部</button>
 							{/if}
 							{if $general_unban || $can_delete}
 							<select name="bulk_action" id="bulk_action" onchange="BulkEdit(this,'{$admin_postkey}');" class="btn btn-outline-primary btn-rounded btn-fw"
 								style="min-width: auto; height: 24px; padding: 0px 12px;">
-								<option value="-1">Action</option>
+								<option value="-1">行动</option>
 								{if $general_unban}
-								<option value="U">Unban</option>
+								<option value="U">解封</option>
 								{/if}
 								{if $can_delete}
-								<option value="D">Delete</option>
+								<option value="D">删除</option>
 								{/if}
 							</select>
 							{/if}
@@ -456,8 +456,8 @@
 					</div>
 					{if $can_export }
 					<div class="col-12 py-2 text-center no-wrap">
-						<a href="./exportbans.php?type=steam" title="Export Permanent SteamID Bans" class="btn btn-inverse-primary btn-rounded btn-fw">Export Permanent SteamID Bans</a>&nbsp;&nbsp;|&nbsp;
-						<a href="./exportbans.php?type=ip" title="Export Permanent IP Bans"class="btn btn-inverse-primary btn-rounded btn-fw">Export Permanent IP Bans</a>
+						<a href="./exportbans.php?type=steam" title="导出永久 SteamID 封禁" class="btn btn-inverse-primary btn-rounded btn-fw">导出永久 SteamID 封禁</a>&nbsp;&nbsp;|&nbsp;
+						<a href="./exportbans.php?type=ip" title="导出永久 IP 封禁"class="btn btn-inverse-primary btn-rounded btn-fw">导出永久 IP 封禁</a>
 					</div>
 					{/if}
 				</div>
@@ -475,7 +475,7 @@
 		{/if}
 		{literal}
 		});
-		
+
 </script>
 {/literal}
 {/if}

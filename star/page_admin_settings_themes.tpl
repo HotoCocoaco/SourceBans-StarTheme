@@ -2,10 +2,10 @@
    <div class="col-lg-12 grid-margin">
       <div class="card">
          <div class="card-body">
-            <h3>Themes</h3>
+            <h3>主题</h3>
             <div class="row">
                <div id="current-theme-holder" class="col-lg-6">
-                  <h4 class="lead">Selected Theme: <span id="theme.name">{$theme_name}</span></h4>
+                  <h4 class="lead">已选择主题: <span id="theme.name">{$theme_name}</span></h4>
                   <div id="current-theme-details">
                      {literal}
                      <style>.imgfix > img { width:250px !important; height:170px !important;}</style>
@@ -16,7 +16,7 @@
                            <div class="table-responsive align-items-start">
                               <table class="table table-sm">
                                  <tr>
-                                    <td><b>Theme Author:</b></td>
+                                    <td><b>主题作者:</b></td>
                                  </tr>
                                  <tr>
                                     <td>
@@ -27,7 +27,7 @@
                                     <td>&nbsp;</td>
                                  </tr>
                                  <tr>
-                                    <td><b>Theme Version:</b></td>
+                                    <td><b>主题版本:</b></td>
                                  </tr>
                                  <tr>
                                     <td>
@@ -38,7 +38,7 @@
                                     <td>&nbsp;</td>
                                  </tr>
                                  <tr>
-                                    <td><b>Theme Link:</b></td>
+                                    <td><b>主题链接:</b></td>
                                  </tr>
                                  <tr>
                                     <td>
@@ -55,8 +55,8 @@
                   </div>
                </div>
                <div class="col-lg-6">
-                  <h4 class="lead">Available Themes</h4>
-                  <p>Click a theme below to see details about it.</p>
+                  <h4 class="lead">可用主题</h4>
+                  <p>单击下面的主题以查看有关它的详细信息。</p>
                   <nav class="sidebar sidebar-themes" id="theme-list">
                      <ul class="nav">
                         {foreach from=$theme_list item=theme name=fe_themes}

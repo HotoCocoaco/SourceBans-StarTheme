@@ -13,7 +13,7 @@
 					<div class="card-body">
 						<div class="clearfix">
 							<i class="mdi float-left mdi-server text-danger icon-lg" data-aos="zoom-in" data-aos-delay="100"></i>
-							<p class="mb-0 text-right" data-aos="flip-left" data-aos-delay="300">Total Servers</p>
+							<p class="mb-0 text-right" data-aos="flip-left" data-aos-delay="300">总计服务器</p>
 							<div class="fluid-container">
 								<h3 class="font-weight-medium text-right mb-0 timer count-number" data-aos="zoom-in" data-aos-delay="50" data-to="{$server_list|@count}" data-speed="1500"></h3>
 							</div>
@@ -26,7 +26,7 @@
 					<div class="card-body">
 						<div class="clearfix">
 							<i class="mdi float-left mdi-block-helper text-warning icon-lg" data-aos="zoom-in" data-aos-delay="300"></i>
-							<p class="mb-0 text-right" data-aos="flip-left" data-aos-delay="500">Total Bans</p>
+							<p class="mb-0 text-right" data-aos="flip-left" data-aos-delay="500">总计封禁</p>
 							<div class="fluid-container">
 								<h3 class="font-weight-medium text-right mb-0 timer count-number" data-aos="zoom-in" data-aos-delay="250" data-to="{$total_bans}" data-speed="1500"></h3>
 							</div>
@@ -39,7 +39,7 @@
 					<div class="card-body">
 						<div class="clearfix">
 							<i class="mdi float-left mdi-microphone-off text-info icon-lg" data-aos="zoom-in" data-aos-delay="500"></i>
-							<p class="mb-0 text-right" data-aos="flip-left" data-aos-delay="700">Total Comm Blocks</p>
+							<p class="mb-0 text-right" data-aos="flip-left" data-aos-delay="700">总计交流阻挡</p>
 							<div class="fluid-container">
 								<h3 class="font-weight-medium text-right mb-0 timer count-number" data-aos="zoom-in" data-aos-delay="450" data-to="{$total_comms}" data-speed="1500"></h3>
 							</div>
@@ -52,7 +52,7 @@
 					<div class="card-body">
 						<div class="clearfix">
 							<i class="mdi float-left mdi-minus-circle text-success icon-lg" data-aos="zoom-in" data-aos-delay="700"></i>
-							<p class="mb-0 text-right" data-aos="flip-left" data-aos-delay="900">Total Stopped Connections</p>
+							<p class="mb-0 text-right" data-aos="flip-left" data-aos-delay="900">总计阻挡连接</p>
 							<div class="fluid-container">
 								<h3 class="font-weight-medium text-right mb-0 timer count-number" data-aos="zoom-in" data-aos-delay="650" data-to="{$total_blocked}" data-speed="1500"></h3>
 							</div>
@@ -70,9 +70,9 @@
 	<div class="col-lg-12 grid-margin" data-aos="fade-out"  data-aos-delay="150">
 		<div class="card">
 			<div class="card-body">
-				<h4 class="card-title" style="margin-bottom:0px;">Latest Added Bans</h4>
+				<h4 class="card-title" style="margin-bottom:0px;">最新增加封禁</h4>
 				<p class="card-description">
-					<code>Total bans:{$total_bans}</code>
+					<code>总计封禁:{$total_bans}</code>
 				</p>
 				<div class="table-responsive">
 					<table class="table table-bordered table-striped table-hover tbl-sm">
@@ -82,23 +82,23 @@
 									MOD
 								</th>
 								<th width="120px">
-									Date/Time
+									日期/时间
 								</th>
 								<th width="14%">
-									Length
+									时长
 								</th>
 								<th>
-									Name
+									名字
 								</th>
 								<th width="200px">
-									Remaining Time
+									剩余时间
 								</th>
 							</tr>
 						</thead>
 						<tbody>
 							{php} include("./themes/star/progress.php");{/php}
 							{foreach from=$players_banned item=player key=index}
-								
+
 							<tr onclick="{$player.link_url}" style="cursor:pointer;" data-aos="zoom-in">
 								<td class="font-weight-medium text-center">
 									{if $player.icon == "web.png"}
@@ -126,7 +126,7 @@
 								</td>
 								<td>
 									{if empty($player.short_name)}
-										<i class="text-muted">no nickname present</i>
+										<i class="text-muted">无昵称</i>
 									{else}
 										{$player.short_name|escape:'html'}
 									{/if}
@@ -160,9 +160,9 @@
 	<div class="col-lg-6 grid-margin" data-aos="fade-out" data-aos-delay="250">
 		<div class="card">
 			<div class="card-body">
-				<h4 class="card-title" style="margin-bottom:0px;">Latest Comm Blocks</h4>
+				<h4 class="card-title" style="margin-bottom:0px;">最新交流阻挡</h4>
 				<p class="card-description">
-					<code>Total blocks: {$total_comms}</code>
+					<code>总计交流阻挡: {$total_comms}</code>
 				</p>
 				<div class="table-responsive">
 					<table class="table table-bordered table-striped table-hover tbl-sm">
@@ -172,20 +172,20 @@
 									&nbsp;
 								</th>
 								<th width="120px">
-									Date/Time
+									日期/时间
 								</th>
 								<th>
-									Name
+									名字
 								</th>
 								<th width="130px">
-									Length
+									时长
 								</th>
 							</tr>
 						</thead>
 						<tbody>
 							{foreach from=$players_commed item=player}
 							<tr onclick="{$player.link_url}" style="cursor:pointer;" height="16" data-aos="zoom-in">
-								<td> 
+								<td>
 									{if $player.type == "images/type_v.png"}
 									<i class="icon-md mdi mdi-microphone-off"></i>
 									{else}
@@ -197,7 +197,7 @@
 								</td>
 								<td>
 									{if empty($player.short_name)}
-									<i>no nickname present</i>
+									<i>无昵称</i>
 									{else}
 									{$player.short_name|escape:'html'}
 									{/if}
@@ -229,9 +229,9 @@
 	<div class="col-lg-6 grid-margin" data-aos="fade-out" id="test" data-aos-delay="550">
 		<div class="card">
 			<div class="card-body">
-				<h4 class="card-title" style="margin-bottom:0px;">Latest Players Blocked</h4>
+				<h4 class="card-title" style="margin-bottom:0px;">最新玩家阻挡</h4>
 				<p class="card-description">
-					<code>Total Stopped: {$total_blocked}</code>
+					<code>总计阻挡: {$total_blocked}</code>
 				</p>
 				<div class="table-responsive">
 					<table class="table table-bordered table-striped table-hover tbl-sm">
@@ -241,16 +241,16 @@
 									&nbsp;
 								</th>
 								<th>
-									Date/Time
+									日期/时间
 								</th>
 								<th width="120px">
-									Name
+									名字
 								</th>
 							</tr>
 						</thead>
 						<tbody>
 							{foreach from=$players_blocked item=player}
-							<tr{if $dashboard_lognopopup} onclick="{$player.link_url}"{else} onclick="{$player.popup}" {/if} style="cursor: pointer;" id="{$player.server}" title="Querying Server Data..." data-aos="zoom-in">
+							<tr{if $dashboard_lognopopup} onclick="{$player.link_url}"{else} onclick="{$player.popup}" {/if} style="cursor: pointer;" id="{$player.server}" title="获取服务器数据..." data-aos="zoom-in">
 							<td>
 								<i class="icon-md mdi mdi-minus-circle"></i>
 							</td>

@@ -2,14 +2,14 @@
 	<div class="col-lg-12 grid-margin">
 		<div class="card">
 			<div class="card-body">
-				<h3>Admins on this server <i class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;">Count:{$admin_count}</i></h3>
+				<h3>此服务器上的管理员 <i class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;">计数:{$admin_count}</i></h3>
 				<br /><br />
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<thead>
 							<tr>
-								<th width="50%">Admin Name</th>
-								<th width="50%">Admin SteamID</th>
+								<th width="50%">管理员</th>
+								<th width="50%">管理员 SteamID</th>
 							</tr>
 						</thead>
 						{foreach from=$admin_list item=admin}
@@ -25,14 +25,14 @@
 									<table width="80%" cellspacing="0" cellpadding="0" class="listtable">
 										<tr>
 											<td align="left" colspan="5">
-												Admin Details Ingame
+												管理员游戏中详情
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="30%">Name</td>
+											<td width="30%">名字</td>
 											<td width="20%">Steam ID</td>
 											<td width="20%">IP</td>
-											<td width="20%">Time</td>
+											<td width="20%">时间</td>
 											<td width="20%">Ping</td>
 										</tr>
 										<tr align="left">

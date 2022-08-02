@@ -3,20 +3,20 @@
 		<div id="0">
 			<div id="msg-green" style="display:none;">
 				<i><img src="./images/yay.png" alt="Warning" /></i>
-				<b>Block updated</b>
+				<b>阻挡已更新</b>
 				<br />
-				The block details have been updated.<br /><br />
-				<i>Redirecting back to blocks page</i>
+				阻挡详情已被更新。<br /><br />
+				<i>重定向回阻挡页面</i>
 			</div>
 			<div id="add-group">
-				<h3>Block Details</h3>
-				For more information or help regarding a certain subject move your mouse over the question mark.<br /><br />
+				<h3>阻挡详情</h3>
+				有关特定主题的更多信息或帮助，请将鼠标移到问号上。<br /><br />
 				<input type="hidden" name="insert_type" value="add">
 				<table width="90%" border="0" style="border-collapse:collapse;" id="group.details" cellpadding="3">
 					<tr>
 						<td valign="top" width="35%">
 							<div class="rowdesc">
-								-{help_icon title="Player name" message="This is the name of the player that was blocked."}-Player name
+								-{help_icon title="玩家名字" message="这是被阻挡的玩家的名字。"}-玩家名字
 							</div>
 						</td>
 						<td>
@@ -29,7 +29,7 @@
 					<tr>
 						<td valign="top">
 							<div class="rowdesc">
-								-{help_icon title="Steam ID" message="This is the Steam ID of the player that is banned. You may want to type a Community ID either."}-Steam ID
+								-{help_icon title="Steam ID" message="这是被封禁玩家的 Steam ID。 您也可能需要输入Community ID。"}-Steam ID
 							</div>
 						</td>
 						<td>
@@ -42,14 +42,14 @@
 					<tr>
 						<td valign="top" width="35%">
 							<div class="rowdesc">
-								-{help_icon title="Block Type" message="Choose what to block - chat or voice"}-Block Type
+								-{help_icon title="阻挡种类" message="选择要阻挡的内容 - 聊天或语音"}-阻挡种类
 							</div>
 						</td>
 						<td>
 							<div align="left">
 								<select id="type" name="type" TABINDEX=2 class="submit-fields">
-									<option value="1">Voice</option>
-									<option value="2">Chat</option>
+									<option value="1">语音</option>
+									<option value="2">聊天</option>
 								</select>
 							</div>
 						</td>
@@ -57,23 +57,23 @@
 					<tr>
 						<td valign="top" width="35%">
 							<div class="rowdesc">
-								-{help_icon title="Block Reason" message="Explain in detail, why this block is being made."}-Block Reason
+								-{help_icon title="阻挡原因" message="详细解释为什么要制作这个阻挡。"}-Block Reason
 							</div>
 						</td>
 						<td>
 							<div align="left">
 								<select id="listReason" name="listReason" TABINDEX=4 class="submit-fields" onChange="changeReason(this[this.selectedIndex].value);">
-									<option value="" selected> -- Select Reason -- </option>
+									<option value="" selected> -- 选择原因 -- </option>
 									<optgroup label="Violation">
-										<option value="Obscene language">Obscene language</option>
-										<option value="Insult players">Insult players</option>
-										<option value="Admin disrespect">Admin disrespect</option>
-										<option value="Inappropriate Language">Inappropriate Language</option>
-										<option value="Trading">Trading</option>
-										<option value="Spam in chat/voice">Spam</option>
-										<option value="Advertisement">Advertisement</option>
+										<option value="Obscene language">淫秽语言</option>
+										<option value="Insult players">侮辱玩家</option>
+										<option value="Admin disrespect">不尊重管理员</option>
+										<option value="Inappropriate Language">不适宜语言</option>
+										<option value="Trading">交易</option>
+										<option value="Spam in chat/voice">刷屏</option>
+										<option value="Advertisement">广告</option>
 									</optgroup>
-									<option value="other">Custom</option>
+									<option value="other">自定义</option>
 								</select>
 								<div id="dreason" style="display:none;">
 									<textarea class="submit-fields" TABINDEX=4 cols="30" rows="5" id="txtReason" name="txtReason"></textarea>
@@ -84,47 +84,47 @@
 					</tr>
 					<tr>
 						<td valign="top" width="35%">
-							<div class="rowdesc">-{help_icon title="Block Length" message="Select how long you want to block this person for."}-Block Length</div>
+							<div class="rowdesc">-{help_icon title="阻挡时长" message="选择您要阻挡此人多长时间。"}-阻挡时长</div>
 						</td>
 						<td>
 							<div align="left">
 								<select id="banlength" name="banlength" TABINDEX=4 class="submit-fields">
-									<option value="0">Permanent</option>
+									<option value="0">永久</option>
 									<optgroup label="minutes">
-										<option value="1">1 minute</option>
-										<option value="5">5 minutes</option>
-										<option value="10">10 minutes</option>
-										<option value="15">15 minutes</option>
-										<option value="30">30 minutes</option>
-										<option value="45">45 minutes</option>
+										<option value="1">1 分钟</option>
+										<option value="5">5 分钟</option>
+										<option value="10">10 分钟</option>
+										<option value="15">15 分钟</option>
+										<option value="30">30 分钟</option>
+										<option value="45">45 分钟</option>
 									</optgroup>
 									<optgroup label="hours">
-										<option value="60">1 hour</option>
-										<option value="120">2 hours</option>
-										<option value="180">3 hours</option>
-										<option value="240">4 hours</option>
-										<option value="480">8 hours</option>
-										<option value="720">12 hours</option>
+										<option value="60">1 小时</option>
+										<option value="120">2 小时</option>
+										<option value="180">3 小时</option>
+										<option value="240">4 小时</option>
+										<option value="480">8 小时</option>
+										<option value="720">12 小时</option>
 									</optgroup>
 									<optgroup label="days">
-										<option value="1440">1 day</option>
-										<option value="2880">2 days</option>
-										<option value="4320">3 days</option>
-										<option value="5760">4 days</option>
-										<option value="7200">5 days</option>
-										<option value="8640">6 days</option>
+										<option value="1440">1 天</option>
+										<option value="2880">2 天</option>
+										<option value="4320">3 天</option>
+										<option value="5760">4 天</option>
+										<option value="7200">5 天</option>
+										<option value="8640">6 天</option>
 									</optgroup>
 									<optgroup label="weeks">
-										<option value="10080">1 week</option>
-										<option value="20160">2 weeks</option>
-										<option value="30240">3 weeks</option>
+										<option value="10080">1 周</option>
+										<option value="20160">2 周</option>
+										<option value="30240">3 周</option>
 									</optgroup>
 									<optgroup label="months">
-										<option value="43200">1 month</option>
-										<option value="86400">2 months</option>
-										<option value="129600">3 months</option>
-										<option value="259200">6 months</option>
-										<option value="518400">12 months</option>
+										<option value="43200">1 月</option>
+										<option value="86400">2 月</option>
+										<option value="129600">3 月</option>
+										<option value="259200">6 月</option>
+										<option value="518400">12 月</option>
 									</optgroup>
 								</select>
 							</div>
@@ -136,9 +136,9 @@
 						<td>
 							<input type="hidden" name="did" id="did" value="" />
 							<input type="hidden" name="dname" id="dname" value="" />
-							-{sb_button text="Save changes" class="ok" id="editban" submit=true}-
+							-{sb_button text="保存更改" class="ok" id="editban" submit=true}-
 							&nbsp;
-							-{sb_button text="Back" onclick="history.go(-1)" class="cancel" id="back" submit=false}-
+							-{sb_button text="返回" onclick="history.go(-1)" class="cancel" id="back" submit=false}-
 						</td>
 					</tr>
 				</table>

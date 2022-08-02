@@ -2,8 +2,8 @@
 	<div class="col-lg-12 grid-margin">
 		<div class="card">
 			<div class="card-body">
-				<h3>Ban Features</h3>
-				<p>For more information or help regarding a certain subject move your mouse over the question mark</p>
+				<h3>封禁功能</h3>
+				<p>有关特定主题的更多信息或帮助，请将鼠标移到问号上</p>
 				<br /><br />
 				<div class="table-responsive">
 					<form action="" method="post">
@@ -12,8 +12,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box to enable the entire ban list to be publically downloaded and shared."></i>
-										Make Export Bans Public
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选中此框可公开下载和共享整个禁止列表。"></i>
+										公开导出封禁
 									</div>
 								</td>
 								<td width="20%">
@@ -29,8 +29,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box to kick a player when a ban is posted."></i>
-										Enable KickIt
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选中此框可在发布封禁时踢出玩家。"></i>
+										开启封禁踢人
 									</div>
 								</td>
 								<td>
@@ -46,8 +46,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box, if you want to enable banning of whole steam community groups."></i>
-										Enable Group Banning
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="如果您想封禁整个 Steam 社区组，请选中此框。"></i>
+										开启组封禁
 									</div>
 								</td>
 								<td>
@@ -64,7 +64,7 @@
 											<input id="enable_groupbanning" type="checkbox" name="enable_groupbanning" vspace="5px" class="form-check-input" disabled>&nbsp;
 											<i class="input-helper"></i></label>
 										</div>
-										<br/>You haven't set a valid steamapi key in the config
+										<br/>您尚未在配置中设置有效的 steamapi 密钥
 										{/if}
 									</div>
 									<div id="enable_groupbanning.msg" class="badentry"></div>
@@ -73,8 +73,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box, if you want to enable banning all steam community friends of a player."></i>
-										Enable Friends Banning
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="如果您想禁用玩家的所有 Steam 社区好友，请选中此框。"></i>
+										开启好友封禁
 									</div>
 								</td>
 								<td>
@@ -91,8 +91,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box, if you want to enable the admin rehashing everytime an admin/group has been changed."></i>
-										Enable Admin Rehashing
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="如果您想在每次更改管理员/组时启用管理员缓存刷新，请选中此框。"></i>
+										开启管理员缓存刷新
 									</div>
 								</td>
 								<td>
@@ -110,8 +110,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box, if you want to enable the Normal login option on the login form."></i>
-										Enable Normal Login
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="如果要在登录表单上启用正常登录选项，请选中此框。"></i>
+										开启普通登录
 									</div>
 								</td>
 								<td>
@@ -128,9 +128,9 @@
 							<!-- end steam login option mod -->
 							<tr>
 								<td colspan="2" align="center">
-									{sb_button text="Save Changes" class="ok btn-success" id="fsettings" submit=true}
+									{sb_button text="保存更改" class="ok btn-success" id="fsettings" submit=true}
 									&nbsp;
-									{sb_button text="Back" class="cancel btn-danger" id="fback"}
+									{sb_button text="返回" class="cancel btn-danger" id="fback"}
 								</td>
 							</tr>
 						</table>
@@ -138,16 +138,16 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<h3>Theme Features</h3>
-				<p>For more information or help regarding a certain subject move your mouse over the question mark</p>
+				<h3>主题功能</h3>
+				<p>有关特定主题的更多信息或帮助，请将鼠标移到问号上</p>
 				<br /><br />
 				<div class="table-responsive">
 					<table class="table table-striped" id="group.features">
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box, if you want to enable the DARK theme."></i>
-									Enable Dark Mode
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="如果要启用深色主题，请选中此框。"></i>
+									开启深色模式
 								</div>
 							</td>
 							<td width="50px"></td>
@@ -166,8 +166,8 @@
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="This color is for navbar left to right gradient coloring..."></i>
-									Navbar Gradient Color
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="此颜色用于导航栏从左到右的渐变着色..."></i>
+									导航栏渐变颜色
 								</div>
 							</td>
 							<td>
@@ -189,8 +189,8 @@
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="This color is for primary coloring"></i>
-									Primary Color
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="此颜色用于原色"></i>
+									主要颜色
 								</div>
 							</td>
 							<td>
@@ -210,8 +210,8 @@
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="This color is for secondary coloring"></i>
-									Secondary Color
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="此颜色用于二次着色"></i>
+									次要颜色
 								</div>
 							</td>
 							<td>
@@ -231,8 +231,8 @@
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="This color is for success coloring"></i>
-									Success Color
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="这种颜色是为了成功着色"></i>
+									成功颜色
 								</div>
 							</td>
 							<td>
@@ -252,8 +252,8 @@
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="This color is for info coloring"></i>
-									Info Color
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="此颜色用于信息着色"></i>
+									信息颜色
 								</div>
 							</td>
 							<td>
@@ -273,8 +273,8 @@
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="This color is for warning coloring"></i>
-									Warning Color
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="此颜色用于警告着色"></i>
+									警告颜色
 								</div>
 							</td>
 							<td>
@@ -294,8 +294,8 @@
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="This color is for danger coloring"></i>
-									Danger Color
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="这种颜色是危险的着色"></i>
+									危险颜色
 								</div>
 							</td>
 							<td>
@@ -315,8 +315,8 @@
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="This color is for light coloring"></i>
-									Light Color
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="此颜色用于浅色"></i>
+									浅色颜色
 								</div>
 							</td>
 							<td>
@@ -336,8 +336,8 @@
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="This color is for dark coloring"></i>
-									Dark Color
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="top" title="这种颜色用于深色"></i>
+									深色颜色
 								</div>
 							</td>
 							<td>
@@ -357,21 +357,21 @@
 						<tr>
 							<td colspan="4" align="center">
 								{php} include("./themes/star/customizeTheme.php");{/php}
-								<button name="themeChanges" class="btn ok btn-success" onclick="SaveThemeChanges()">Save Theme Changes</button>
+								<button name="themeChanges" class="btn ok btn-success" onclick="SaveThemeChanges()">保存主题更改</button>
 								&nbsp;
-								{sb_button text="Back" class="cancel btn-danger" id="fback"}
+								{sb_button text="返回" class="cancel btn-danger" id="fback"}
 							</td>
 						</tr>
 						<tr>
 							<td colspan="4" align="center">
-								<button class="btn btn-primary">Primary</button>
-								<button class="btn btn-secondary">Secondary</button>
-								<button class="btn btn-success">Success</button>
-								<button class="btn btn-info">Info</button>
-								<button class="btn btn-warning">Warning</button>
-								<button class="btn btn-danger">Danger</button>
-								<button class="btn btn-light">Light</button>
-								<button class="btn btn-dark">Dark</button>
+								<button class="btn btn-primary">主要</button>
+								<button class="btn btn-secondary">次要</button>
+								<button class="btn btn-success">成功</button>
+								<button class="btn btn-info">信息</button>
+								<button class="btn btn-warning">警告</button>
+								<button class="btn btn-danger">危险</button>
+								<button class="btn btn-light">浅色</button>
+								<button class="btn btn-dark">深色</button>
 							</td>
 						</tr>
 					</table>

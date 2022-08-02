@@ -11,8 +11,8 @@ Access Denied!
 						<tr>
 							<td valign="top" width="35%">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type the name of the new group you want to create."></i>
-									Group Name 
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="键入要创建的新组的名称。"></i>
+									组名字
 								</div>
 							</td>
 							<td>
@@ -25,17 +25,17 @@ Access Denied!
 						<tr>
 							<td valign="top">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="This defines the type of group you are about to create. This helps identify and catagorize the groups list."></i>
-									Group Type 
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="这定义了您将要创建的组的类型。 这有助于识别和分类组列表。"></i>
+									组类型
 								</div>
 							</td>
 							<td>
 								<div align="left">
 									<select onchange="UpdateGroupPermissionCheckBoxes()" TABINDEX=2 class="form-control" name="grouptype" id="grouptype">
-										<option value="0">Please Select...</option>
-										<option value="1">Web Admin Group</option>
-										<option value="2">Server Admin Group</option>
-										<option value="3">Server Group</option>
+										<option value="0">请选择...</option>
+										<option value="1">网页管理员组</option>
+										<option value="2">服务器管理员组</option>
+										<option value="3">服务器组</option>
 									</select>
 								</div>
 								<div id="type.msg" class="badentry"></div>
@@ -46,10 +46,10 @@ Access Denied!
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
-							<td>      
-								{sb_button text="Save Changes" onclick="ProcessGroup();" class="ok" id="agroup" submit=false}
+							<td>
+								{sb_button text="保存更改" onclick="ProcessGroup();" class="ok" id="agroup" submit=false}
 								&nbsp;
-								{sb_button text="Back" onclick="history.go(-1)" class="cancel" id="back" submit=false} 
+								{sb_button text="返回" onclick="history.go(-1)" class="cancel" id="back" submit=false}
 							</td>
 						</tr>
 					</table>

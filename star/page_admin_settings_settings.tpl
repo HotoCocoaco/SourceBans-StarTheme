@@ -4,16 +4,16 @@
 			<div class="card-body">
 				<form action="" method="post">
 					<input type="hidden" name="settingsGroup" value="mainsettings" />
-					<h3>Main Settings</h3>
-					<p>For more information or help regarding a certain subject move your mouse over the question mark.</p>
+					<h3>主要设置</h3>
+					<p>有关特定主题的更多信息或帮助，请将鼠标移到问号上。</p>
 					<br /><br />
 					<div class="table-responsive">
 						<table class="table table-striped">
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Define the title shown in the title of your browser."></i>
-										Title 
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="定义在浏览器标题中显示的标题。"></i>
+										标题
 									</div>
 								</td>
 								<td>
@@ -25,22 +25,22 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Here you can define a new location for the logo, so you can use your own image."></i>
-										Path to logo 
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="您可以在此处定义徽标的新位置，以便使用自己的图像。"></i>
+										logo路径
 									</div>
 								</td>
 								<td>
 									<div align="left">
 										<input type="text" TABINDEX=2 class="form-control" id="template_logo" name="template_logo" value="{$config_logo}" />
-										<p class="mt-1 mb-0">For mini logo, add &quot;-mini&quot; at the end of the file name. <code>sb-logo.png &gt; sb-logo-mini.png</code></p>
+										<p class="mt-1 mb-0">对于迷你logo，增加 &quot;-mini&quot; 在文件名结尾 <code>sb-logo.png &gt; sb-logo-mini.png</code></p>
 									</div>
 								</td>
 							</tr>
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Define the shortest length a password can be."></i>
-										Min password length 
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="定义密码的最短长度。"></i>
+										最小密码长度
 									</div>
 								</td>
 								<td>
@@ -53,22 +53,22 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Here you can change the date format, displayed in the banlist and other pages."></i>
-										Date format 
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="在这里您可以更改日期格式，显示在封禁列表和其他页面中。"></i>
+										日期格式
 									</div>
 								</td>
 								<td>
 									<div align="left">
 										<input type="text" TABINDEX=4 class="form-control" id="config_dateformat" name="config_dateformat" value="{$config_dateformat}" />
-										<a href="http://www.php.net/date" target="_blank">See: PHP date()</a>
+										<a href="http://www.php.net/date" target="_blank">查看: PHP date()</a>
 									</div>
 								</td>
 							</tr>
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box to enable the debugmode permanently."></i>
-										Debugmode
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选中此框以永久启用调试模式。"></i>
+										调试模式
 									</div>
 								</td>
 								<td>
@@ -83,14 +83,14 @@
 							</tr>
 							<tr>
 								<td valign="top" colspan="2">
-									<h3>Dashboard Settings</h3>
+									<h3>仪表板设置</h3>
 								</td>
 							</tr>
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Set the title for the dashboard introduction."></i>
-										Intro Title 
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="设置仪表板介绍的标题。"></i>
+										介绍标题
 									</div>
 								</td>
 								<td>
@@ -103,8 +103,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Set the text for the dashboard introduction."></i>
-										Intro Text 
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="设置仪表板介绍的文本。"></i>
+										介绍文本
 									</div>
 								</td>
 								<td>
@@ -118,8 +118,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box to disable the log info popup and use direct link."></i>
-										Disable Log Popup
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选中此框可禁用日志信息弹出窗口并使用直接链接。"></i>
+										禁用日志弹出
 									</div>
 								</td>
 								<td>
@@ -134,14 +134,14 @@
 							</tr>
 							<tr>
 								<td valign="top" colspan="2">
-									<h3>Page Settings</h3>
+									<h3>页面设置</h3>
 								</td>
 							</tr>
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box to enable the protest ban page."></i>
-										Enable Protest Ban
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选中此框以启用封禁申诉页面。"></i>
+										启用封禁申诉
 									</div>
 								</td>
 								<td>
@@ -157,8 +157,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box to enable the submit ban page."></i>
-										Enable Submit Ban
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选中此框以启用提交封禁页面。"></i>
+										开启提交封禁
 									</div>
 								</td>
 								<td>
@@ -174,8 +174,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box to enable the commslist page."></i>
-										Enable Commslist
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选中此框以启用交流阻挡页面。"></i>
+										启用交流阻挡页面
 									</div>
 								</td>
 								<td>
@@ -191,8 +191,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box to only send the protest notification email to the admin who banned the protesting player."></i>
-										Only Send One Email
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选中此框以仅将申诉通知电子邮件发送给封禁申诉玩家的管理员。"></i>
+										只发送一次邮件
 									</div>
 								</td>
 								<td>
@@ -208,18 +208,18 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Choose the page that will be the first page people will see."></i>
-										Default Page
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选择将成为人们将看到的第一页的页面。"></i>
+										默认页面
 									</div>
 								</td>
 								<td>
 									<div align="left">
 										<select class="form-control" TABINDEX=11 name="default_page" id="default_page">
-											<option value="0">Dashboard</option>
-											<option value="1">Ban List</option>
-											<option value="2">Servers</option>
-											<option value="3">Submit a ban</option>
-											<option value="4">Protest a ban</option>
+											<option value="0">仪表盘</option>
+											<option value="1">封禁列表</option>
+											<option value="2">服务器</option>
+											<option value="3">提交封禁</option>
+											<option value="4">申诉封禁</option>
 										</select>
 									</div>
 								</td>
@@ -227,8 +227,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Click this button, to clean the themes_c folder."></i>
-										Clear Cache
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="单击此按钮，清理themes_c 文件夹。"></i>
+										清理缓存
 									</div>
 								</td>
 								<td>
@@ -240,14 +240,14 @@
 							</tr>
 							<tr>
 								<td valign="top" colspan="2">
-									<h3>Banlist Settings</h3>
+									<h3>封禁列表设置</h3>
 								</td>
 							</tr>
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Choose how many items to show on each page."></i>
-										Items Per Page 
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选择要在每页上显示的项目数。"></i>
+										每页项目数
 									</div>
 								</td>
 								<td>
@@ -260,8 +260,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box, if you want to hide the name of the admin in the baninfo."></i>
-										Hide Admin Name
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="如果您想在封禁详情中隐藏管理员的名称，请选中此框。"></i>
+										隐藏管理员名字
 									</div>
 								</td>
 								<td>
@@ -278,8 +278,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box, if you don't want to display the country out of an IP in the banlist. Use if you encounter display problems."></i>
-										No Country Research
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="如果您不想在禁止列表中显示 IP 之外的国家/地区，请选中此框。如果您遇到显示问题，请使用。"></i>
+										不搜索地区
 									</div>
 								</td>
 								<td>
@@ -296,8 +296,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Check this box, if you want to hide the player IP from the public."></i>
-										Hide Player IP
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="如果您想对公众隐藏玩家 IP，请选中此框。"></i>
+										隐藏玩家IP
 									</div>
 								</td>
 								<td>
@@ -314,8 +314,8 @@
 							<tr>
 								<td valign="top">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type the custom banreasons you want to appear in the dropdown menu."></i>
-										Custom Banreasons
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="输入您希望在下拉菜单中显示的自定义原因。"></i>
+										自定义封禁原因
 									</div>
 								</td>
 								<td>
@@ -336,7 +336,7 @@
 										<table>
 											<tr>
 												<td>
-													<a href="javascript:void(0)" onclick="MoreFieldsNewCss();" title="Add more fields" class="btn btn-primary"> Add Fields</a>
+													<a href="javascript:void(0)" onclick="MoreFieldsNewCss();" title="Add more fields" class="btn btn-primary"> 增加表单</a>
 												</td>
 											</tr>
 										</table>
@@ -350,9 +350,9 @@
 							<tr>
 								<td>&nbsp;</td>
 								<td>
-									{sb_button text="Save Changes" class="ok btn-success" id="asettings" submit=true}
+									{sb_button text="保存更改" class="ok btn-success" id="asettings" submit=true}
 									&nbsp;
-									{sb_button text="Back" class="cancel btn-danger" id="aback"}
+									{sb_button text="返回" class="cancel btn-danger" id="aback"}
 								</td>
 							</tr>
 						</table>

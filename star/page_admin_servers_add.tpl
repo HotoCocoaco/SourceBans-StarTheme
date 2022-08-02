@@ -5,9 +5,9 @@ Access Denied
 	<div class="col-lg-12 grid-margin">
 		<div class="card">
 			<div class="card-body">
-				<h3>Server Details</h3>
+				<h3>服务器详情</h3>
 				<p>
-					For more information or help regarding a certain subject move your mouse over the question mark.
+					有关特定主题的更多信息或帮助，请将鼠标移到问号上。
 				</p>
 				<br /><br />
 				<input type="hidden" name="insert_type" value="add">
@@ -16,8 +16,8 @@ Access Denied
 						<tr>
 							<td valign="top" width="35%">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="This is the IP address to your server. You can also type a domain, if you have one setup."></i>
-									Server IP/Domain
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="这是您服务器的 IP 地址。 如果您有一个设置，您还可以键入域名。"></i>
+									服务器 IP/域名
 								</div>
 							</td>
 							<td>
@@ -30,8 +30,8 @@ Access Denied
 						<tr>
 							<td valign="middle">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="This is the port that the server is running off. <br /><br /><i>Default: 27015</i>"></i>
-									Server Port
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="这是服务器正在运行的端口。 <br /><br /><i>默认: 27015</i>"></i>
+									服务器端口
 								</div>
 							</td>
 							<td>
@@ -44,8 +44,8 @@ Access Denied
 						<tr>
 							<td valign="middle">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-html="true" data-placement="bottom" title="This is your servers RCON password. This can be found in your server.cfg file next to <i>rcon_password</i>.<br /><br />This will be used to allow admins to administrate the server though the web interface."></i>
-									RCON Password
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-html="true" data-placement="bottom" title="这是您的服务器 RCON 密码。 这可以在 <i>rcon_password</i> 旁边的 server.cfg 文件中找到。<br /><br />这将用于允许管理员通过 Web 界面管理服务器。"></i>
+									RCON 密码
 								</div>
 							</td>
 							<td>
@@ -58,8 +58,8 @@ Access Denied
 						<tr>
 							<td valign="middle">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Please re-type your rcon password to avoid 'typos'"></i>
-									RCON Password (Confirm)
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-html="true" data-placement="bottom" title="请重新输入您的 rcon 密码以避免“错字”"></i>
+									RCON 密码 (确认)
 								</div>
 							</td>
 							<td>
@@ -72,15 +72,15 @@ Access Denied
 						<tr>
 							<td valign="middle">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Select the mod that your server is currently running."></i>
-									Server MOD 
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-html="true" data-placement="bottom" title="选择您的服务器当前正在运行的 mod。"></i>
+									服务器 MOD
 								</div>
 							</td>
 							<td>
 								<div align="left" id="admingroup">
 									<select name="mod" TABINDEX=5 onchange="" id="mod" class="form-control">
 										{if !$edit_server}
-										<option value="-2">Please Select...</option>
+										<option value="-2">请选择...</option>
 										{/if}
 										{foreach from="$modlist" item="mod"}
 										<option value='{$mod.mid}'>{$mod.name}</option>
@@ -93,8 +93,8 @@ Access Denied
 						<tr>
 							<td valign="middle">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Enables the server to be shown on the public servers list."></i>
-									Enabled
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-html="true" data-placement="bottom" title="使服务器显示在公共服务器列表中。"></i>
+									启用
 								</div>
 							</td>
 							<td>
@@ -111,8 +111,8 @@ Access Denied
 						<tr>
 							<td valign="middle">
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Choose the groups to add this server to. Server groups are used for adding admins to specific sets of servers."></i>
-									Server Groups 
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-html="true" data-placement="bottom" title="选择要将此服务器添加到的组。 服务器组用于将管理员添加到特定的服务器集。"></i>
+									服务器组
 								</div>
 							</td>
 							<td>&nbsp;</td>
@@ -132,7 +132,7 @@ Access Denied
 							</td>
 						</tr>
 						{/foreach}
-						<tr id="nsgroup" valign="top" class="badentry"> 		
+						<tr id="nsgroup" valign="top" class="badentry">
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
@@ -143,7 +143,7 @@ Access Denied
 								{sb_button text=$submit_text onclick="process_add_server();" class="ok" id="aserver" submit=false}
 								{/if}
 								&nbsp;
-								{sb_button text="Back" onclick="history.go(-1)" class="cancel" id="back" submit=false}
+								{sb_button text="返回" onclick="history.go(-1)" class="cancel" id="back" submit=false}
 							</td>
 						</tr>
 					</table>

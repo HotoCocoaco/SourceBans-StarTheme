@@ -13,16 +13,16 @@ Access Denied!
 			<div class="card-body" id="add-group">
 				<form action="" method="post">
 					<h3>Overrides</h3>
-					<p>With Overrides you can change the flags or permissions on any command, either globally, or for a specific group, without editing plugin source code.<br />
-						<i>Read about <b><a href="http://wiki.alliedmods.net/Overriding_Command_Access_%28SourceMod%29" title="Overriding Command Access (SourceMod)" target="_blank">overriding command access</a></b> in the AlliedModders Wiki!</i><br /><br />
+					<p>使用 Overrides，您可以在全局或特定组中更改任何命令的标志或权限，而无需编辑插件源代码。<br />
+						<i>阅读相关 <b><a href="http://wiki.alliedmods.net/Overriding_Command_Access_%28SourceMod%29" title="Overriding Command Access (SourceMod)" target="_blank">override 命令权限</a></b> 于 AlliedModders Wiki！</i><br /><br />
 					</p>
-					Blanking out an overrides' name will delete it.<br /><br />
+					删除 Override 的名称将删除它。<br /><br />
 					<div id="banlist" class="table-responsive">
 						<table class="table table-striped" id="overrides">
 							<thead>
 								<tr>
-									<th>Type</th>
-									<th>Name</th>
+									<th>类型</th>
+									<th>名字</th>
 									<th>Flags</th>
 								</tr>
 							</thead>
@@ -30,8 +30,8 @@ Access Denied!
 							<tr>
 								<td class="tablerow1">
 									<select name="override_type[]" class="form-control">
-									<option{if $override.type == "command"} selected="selected"{/if} value="command">Command</option>
-									<option{if $override.type == "group"} selected="selected"{/if} value="group">Group</option>
+									<option{if $override.type == "command"} selected="selected"{/if} value="command">命令</option>
+									<option{if $override.type == "group"} selected="selected"{/if} value="group">组</option>
 									</select>
 									<input type="hidden" name="override_id[]" value="{$override.id}" />
 								</td>
@@ -42,8 +42,8 @@ Access Denied!
 							<tr>
 								<td class="tablerow1">
 									<select class="form-control" name="new_override_type">
-										<option value="command">Command</option>
-										<option value="group">Group</option>
+										<option value="command">命令</option>
+										<option value="group">组</option>
 									</select>
 								</td>
 								<td class="tablerow1"><input class="form-control" name="new_override_name" /></td>
@@ -53,8 +53,8 @@ Access Denied!
 					</div>
 					<br />
 					<center>
-						{sb_button text="Save" class="ok" id="oversave" submit=true}
-						{sb_button text="Back" onclick="history.go(-1)" class="cancel" id="oback"}
+						{sb_button text="保存" class="ok" id="oversave" submit=true}
+						{sb_button text="返回" onclick="history.go(-1)" class="cancel" id="oback"}
 					</center>
 				</form>
 			</div>
