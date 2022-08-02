@@ -70,7 +70,7 @@
 		<div class="card aligner-wrapper" style="cursor:pointer;">
 			<div class="card-body p-2 p-md-2 p-lg-3 p-xl-4">
 				<div class="absolute left top bottom h-100 v-strock-2 bg-primary"></div>
-				<p class="text-muted mb-2">Admin Information</p>
+				<p class="text-muted mb-2">管理员信息</p>
 				<div class="d-flex align-items-center">
 					<h1 class="font-weight-medium mb-2 timer count-number" data-to="{$total_admins}" data-speed="1500"></h1>
 					<h5 class="font-weight-medium text-primary ml-2">总计管理员</h5>
