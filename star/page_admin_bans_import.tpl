@@ -5,8 +5,8 @@ Access Denied!
 	<div class="col-lg-12 grid-margin">
 		<div class="card">
 			<div class="card-body" id="add-group1">
-				<h3>Import Bans</h3>
-				<p>For more information or help regarding a certain subject move your mouse over the question mark.</p>
+				<h3>导入封禁</h3>
+				<p>有关特定主题的更多信息或帮助，请将鼠标移到问号上。</p>
 				<br /><br />
 				<div class="table-responsive">
 					<form action="" method="post" enctype="multipart/form-data">
@@ -15,8 +15,8 @@ Access Denied!
 							<tr>
 								<td>
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Select the banned_users.cfg or banned_ip.cfg file to upload and add bans."></i>
-										File 
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="选择banned_users.cfg 或banned_ip.cfg 文件上传和添加封禁。"></i>
+										File
 									</div>
 								</td>
 								<td>
@@ -28,8 +28,8 @@ Access Denied!
 							</tr>
 							<tr>
 								<td valign="top">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="right" title="Check this box, if you want to get the names of the players from their steam community profile.(just works with banned_users.cfg)"></i>
-									Get Names
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="right" title="如果您想从他们的 Steam 社区资料中获取玩家的名字，请选中此框。（仅适用于banned_users.cfg）"></i>
+									获取名字
 								</td>
 								<td>
 									<div align="left">
@@ -44,9 +44,9 @@ Access Denied!
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
-									{sb_button text="Import" class="ok" id="iban" submit=true}
+									{sb_button text="导入" class="ok" id="iban" submit=true}
 									&nbsp;
-									{sb_button text="Back" onclick="history.go(-1)" class="cancel" id="iback"}
+									{sb_button text="返回" onclick="history.go(-1)" class="cancel" id="iback"}
 								</td>
 							</tr>
 						</table>

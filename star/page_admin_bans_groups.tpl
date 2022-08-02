@@ -8,10 +8,10 @@ This feature is disabled! Only follow links!
 	<div class="col-lg-12 grid-margin">
 		<div class="card">
 			<div class="card-body">
-				<h3>Add Group Ban</h3>
+				<h3>增加组封禁</h3>
 				{if NOT $list_steam_groups}
-				<p>Here you can add a ban for a whole steam community group.<br />
-					e.g. <code>http://steamcommunity.com/groups/interwavestudios</code>
+				<p>在这里，您可以为整个 Steam 社区组添加禁令。<br />
+					举例 <code>http://steamcommunity.com/groups/interwavestudios</code>
 				</p>
 				<br /><br />
 				<div class="table-responsive">
@@ -19,8 +19,8 @@ This feature is disabled! Only follow links!
 						<tr>
 							<td>
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type the link to a steam community group."></i>
-									Group Link 
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="输入 Steam 社区组的链接。"></i>
+									组链接
 								</div>
 							</td>
 							<td>
@@ -33,8 +33,8 @@ This feature is disabled! Only follow links!
 						<tr>
 							<td>
 								<div class="rowdesc">
-									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type the reason, why you are going to ban this steam community group."></i>
-									Group Ban Reason 
+									<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="输入原因，为什么要封禁这个 Steam 社区组。"></i>
+									组封禁原因
 								</div>
 							</td>
 							<td>
@@ -47,19 +47,19 @@ This feature is disabled! Only follow links!
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								{sb_button text="Add Group Ban" onclick="ProcessGroupBan();" class="ok btn-success" id="agban" submit=false}
+								{sb_button text="增加组封禁" onclick="ProcessGroupBan();" class="ok btn-success" id="agban" submit=false}
 								&nbsp;
-								{sb_button text="Back" onclick="history.go(-1)" class="cancel btn-danger" id="aback"}
+								{sb_button text="返回" onclick="history.go(-1)" class="cancel btn-danger" id="aback"}
 							</td>
 						</tr>
 					</table>
 				</div>
 				{else}
-				<p>All groups the player {$player_name} is member of are listed here.<br />
-					Choose the steam groups you want to ban.
+				<p>玩家 {$player_name} 的全部Steam组已被列出<br />
+					选择您要封禁的 Steam 组。
 				</p>
 				<br /><br />
-				<div id="steamGroupsText" name="steamGroupsText">Loading the groups...</div>
+				<div id="steamGroupsText" name="steamGroupsText">加载组...</div>
 				<div id="steamGroups" name="steamGroups" style="display:none;" class="table-responsive">
 					<table id="steamGroupsTable" class="table" name="steamGroupsTable" border="0" width="500px">
 						<tr>
@@ -72,15 +72,15 @@ This feature is disabled! Only follow links!
 							<td height="16" class="listtable_top" align="center"><b>Group</b></td>
 						</tr>
 					</table>
-					&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-outline-primary btn-rounded btn-fw" style="height:24px;padding: 2px 10px; min-width:85px;" 
-						onclick="TickSelectAll();return false;" title="Select All" name="tickswitchlink" id="tickswitchlink">Select All</button><br /><br />
+					&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-outline-primary btn-rounded btn-fw" style="height:24px;padding: 2px 10px; min-width:85px;"
+						onclick="TickSelectAll();return false;" title="选择全部" name="tickswitchlink" id="tickswitchlink">选择全部</button><br /><br />
 					<div class="table-responsive">
 						<table  id="group.details" class="table">
 							<tr>
 								<td valign="top" width="35%">
 									<div class="rowdesc">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Type the reason, why you are going to ban this steam community group."></i> 
-										Group Ban Reason 
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="输入原因，为什么要封禁这个 Steam 社区组。"></i>
+										组封禁原因
 									</div>
 								</td>
 								<td>

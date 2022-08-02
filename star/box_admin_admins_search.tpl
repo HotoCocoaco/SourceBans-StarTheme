@@ -1,16 +1,16 @@
 <div class="row">
 	<div class="col-lg-6 mx-auto pt-3">
-	
+
 		<p class="text-center">
 			<button class="btn btn-inverse-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-			<i class="mdi mdi-magnify"></i>Advanced Search
+			<i class="mdi mdi-magnify"></i>高级搜索
 			</button>
 		</p>
 		<div class="collapse box-shadow-delayed" id="collapseExample">
 			<div class="row mx-5">
 				<div class="form-radio col-sm-3">
 					<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="search_type" id="name_" value="name"> Nickname
+					<input type="radio" class="form-check-input" name="search_type" id="name_" value="name"> 昵称
 					</label>
 				</div>
 				<div class="col-sm-9">
@@ -29,12 +29,12 @@
 					</div>
 					<div class="col-sm-7">
 						<select class="form-control" id="steam_match" onmouseup="$('steam_').checked = true">
-							<option value="0" selected>Exact Match</option>
-							<option value="1">Partial Match</option>
+							<option value="0" selected>精确匹配</option>
+							<option value="1">模糊匹配</option>
 						</select>
 					</div>
 				</div>
-			</div> 
+			</div>
 			{if $can_editadmin}
 			<div class="row mx-5">
 				<div class="form-radio col-sm-3">
@@ -50,7 +50,7 @@
 			<div class="row mx-5">
 				<div class="form-radio col-sm-3">
 					<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="search_type" id="webgroup_" value="radiobutton"> Web Group
+					<input type="radio" class="form-check-input" name="search_type" id="webgroup_" value="radiobutton"> 网页组
 					</label>
 				</div>
 				<div class="col-sm-9">
@@ -64,7 +64,7 @@
 			<div class="row mx-5">
 				<div class="form-radio col-sm-3">
 					<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="search_type" id="srvadmgroup_" value="radiobutton"> Serveradmin Group
+					<input type="radio" class="form-check-input" name="search_type" id="srvadmgroup_" value="radiobutton"> 服务器管理员组
 					</label>
 				</div>
 				<div class="col-sm-9">
@@ -78,7 +78,7 @@
 			<div class="row mx-5">
 				<div class="form-radio col-sm-3">
 					<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="search_type" id="srvgroup_" value="radiobutton"> Server Group
+					<input type="radio" class="form-check-input" name="search_type" id="srvgroup_" value="radiobutton"> 服务器组
 					</label>
 				</div>
 				<div class="col-sm-9">
@@ -92,7 +92,7 @@
 			<div class="row mx-5">
 				<div class="form-radio col-sm-3">
 					<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="search_type" id="admwebflags_" value="radiobutton"> Web Permissions
+					<input type="radio" class="form-check-input" name="search_type" id="admwebflags_" value="radiobutton"> 网页权限
 					</label>
 				</div>
 				<div class="col-sm-9">
@@ -106,7 +106,7 @@
 			<div class="row mx-5">
 				<div class="form-radio col-sm-3">
 					<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="search_type" id="admsrvflags_" value="radiobutton"> Server Permissions
+					<input type="radio" class="form-check-input" name="search_type" id="admsrvflags_" value="radiobutton"> 服务器权限
 					</label>
 				</div>
 				<div class="col-sm-9">
@@ -120,19 +120,19 @@
 			<div class="row mx-5">
 				<div class="form-radio col-sm-3">
 					<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="search_type" id="admin_on_" value="radiobutton"> Server
+					<input type="radio" class="form-check-input" name="search_type" id="admin_on_" value="radiobutton"> 服务器
 					</label>
 				</div>
 				<div class="col-sm-9">
 					<select class="form-control" id="server" onmouseup="$('admin_on_').checked = true">
-						<option label="Web Ban" value="0">Web Ban</option>
+						<option label="Web Ban" value="0">网页封禁</option>
 						{foreach from="$server_list" item="server}
-						<option value="{$server.sid}" id="ss{$server.sid}">Retrieving Hostname... ({$server.ip}:{$server.port})</option>
+						<option value="{$server.sid}" id="ss{$server.sid}">获取主机名... ({$server.ip}:{$server.port})</option>
 						{/foreach}
 					</select>
 				</div>
 			</div>
-			
+
 			<div class="row mx-5 pb-3">
 				<div class="col-sm-3">
 				</div>

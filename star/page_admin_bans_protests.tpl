@@ -5,8 +5,8 @@ Access Denied!
 	<div class="col-lg-12 grid-margin">
 		<div class="card">
 			<div class="card-body" id="add-group1">
-				<h3>Ban Protests <i class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;">Total Protests:{$protest_count}</i></h3>
-				<p>Click a player's nickname to view information about their ban</p>
+				<h3>封禁申诉 <i class="btn btn-outline-primary btn-rounded btn-fw" style="width:20px;height:20px;padding:0px;line-height:18px;">总申诉:{$protest_count}</i></h3>
+				<p>单击玩家的昵称以查看有关其封禁的信息</p>
 				<br /><br />
 				<div class="table-responsive">
 					<div class="col-12 my-2 text-xl-right text-lg-left">
@@ -17,9 +17,9 @@ Access Denied!
 					<table class="table">
 						<thead>
 							<tr>
-								<th>Nickname</th>
+								<th>昵称</th>
 								<th>SteamID</th>
-								<th>Action</th>
+								<th>行动</th>
 							</tr>
 						</thead>
 						{foreach from="$protest_list" item="protest"}
@@ -30,7 +30,7 @@ Access Denied!
 								{if $permission_editban}
 								<a href="#" onclick="RemoveProtest('{$protest.pid}', '{if $protest.authid!=""}{$protest.authid}{else}{$protest.ip}{/if}', '1');">Remove</a> -
 								{/if}
-								<a href="index.php?p=admin&c=bans&o=email&type=p&id={$protest.pid}">Contact</a>
+								<a href="index.php?p=admin&c=bans&o=email&type=p&id={$protest.pid}">联系</a>
 							</td>
 						</tr>
 						<tr id="pid_{$protest.pid}a" >
@@ -39,11 +39,11 @@ Access Denied!
 									<table class="table tbl-sm" width="100%">
 										<tr>
 											<td height="16" align="left" class="listtable_top" colspan="3">
-												<b>Bandetails</b>
+												<b>封禁详情</b>
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16">Player</td>
+											<td width="20%" height="16">玩家</td>
 											<td height="16">{$protest.name}</td>
 											<td width="30%" rowspan="11" class="listtable_2">
 												<div class="ban-edit">
@@ -62,62 +62,62 @@ Access Denied!
 											<td width="20%" height="16">SteamID</td>
 											<td height="16">
 												{if $protest.authid == ""}
-												<i><font color="#677882">no steamid present</font></i>
+												<i><font color="#677882">无SteamID</font></i>
 												{else}
 												{$protest.authid}
 												{/if}
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16">IP address</td>
+											<td width="20%" height="16">IP 地址</td>
 											<td height="16">
 												{if $protest.ip == 'none' || $protest.ip == ''}
-												<i><font color="#677882">no IP address present</font></i>
+												<i><font color="#677882">无IP地址</font></i>
 												{else}
 												{$protest.ip}
 												{/if}
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16">Invoked on</td>
+											<td width="20%" height="16">调用于</td>
 											<td height="16">{$protest.date}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16">End Date</td>
+											<td width="20%" height="16">结束日期</td>
 											<td height="16">
 												{if $protest.ends == 'never'}
-												<i><font color="#677882">Not applicable.</font></i>
+												<i><font color="#677882">不适用。</font></i>
 												{else}
 												{$protest.ends}
 												{/if}
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16">Reason</td>
+											<td width="20%" height="16">原因</td>
 											<td height="16">{$protest.ban_reason}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16">Banned by Admin</td>
+											<td width="20%" height="16">操作封禁的管理员</td>
 											<td height="16">{$protest.admin}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16">Banned from</td>
+											<td width="20%" height="16">被封禁于</td>
 											<td height="16">{$protest.server}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16">Protester IP</td>
+											<td width="20%" height="16">申诉者IP</td>
 											<td height="16">{$protest.pip}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16">Protested on</td>
+											<td width="20%" height="16">申诉于</td>
 											<td height="16">{$protest.datesubmitted}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16">Protest message</td>
+											<td width="20%" height="16">申诉信息</td>
 											<td height="16">{$protest.reason}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16">Comments</td>
+											<td width="20%" height="16">评论</td>
 											<td height="60" colspan="3">
 												{if $protest.commentdata != "None"}
 												<table width="100%" border="0">
@@ -134,7 +134,7 @@ Access Denied!
 															{if !empty($commenta.comname)}
 															<b>{$commenta.comname|escape:'html'}</b>
 															{else}
-															<i><font color="#677882">Admin deleted</font></i>
+															<i><font color="#677882">管理员已删除</font></i>
 															{/if}
 														</td>
 														<td align="right"><b>{$commenta.added}</b>
@@ -153,7 +153,7 @@ Access Denied!
 													{if !empty($commenta.edittime)}
 													<tr>
 														<td colspan="3">
-															<span style="font-size:6pt;color:grey;">last edit {$commenta.edittime} by {if !empty($commenta.editname)}{$commenta.editname}{else}<i><font color="#677882">Admin deleted</font></i>{/if}</span>
+															<span style="font-size:6pt;color:grey;">last edit {$commenta.edittime} by {if !empty($commenta.editname)}{$commenta.editname}{else}<i><font color="#677882">管理员已删除</font></i>{/if}</span>
 														</td>
 													</tr>
 													{/if}

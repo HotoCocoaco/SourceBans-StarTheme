@@ -7,8 +7,8 @@
 					<table id="group.details" class="table table-striped">
 						<tr>
 							<td>
-								<div class="rowdesc"><i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type the subject of the email."></i>
-									Subject 
+								<div class="rowdesc"><i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="键入电子邮件的主题。"></i>
+									主题
 								</div>
 							</td>
 							<td>
@@ -20,8 +20,8 @@
 						</tr>
 						<tr>
 							<td valign="top">
-								<div class="rowdesc"><i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type your message here."></i>
-									Message 
+								<div class="rowdesc"><i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="在这里输入你的消息。"></i>
+									消息
 								</div>
 							</td>
 							<td>
@@ -34,9 +34,9 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								{sb_button text="Send Email" onclick="$email_js" class="ok btn-success" id="aemail" submit=false}
+								{sb_button text="发送邮件" onclick="$email_js" class="ok btn-success" id="aemail" submit=false}
 								&nbsp;
-								{sb_button text="Back" onclick="history.go(-1)" class="cancel btn-danger" id="back" submit=false}
+								{sb_button text="返回" onclick="history.go(-1)" class="cancel btn-danger" id="back" submit=false}
 							</td>
 						</tr>
 					</table>

@@ -2,17 +2,17 @@
 	<div class="col-lg-6 mx-auto pt-3">
 		<p class="text-center">
 			<button class="btn btn-inverse-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-			<i class="mdi mdi-magnify"></i>Advanced Search
+			<i class="mdi mdi-magnify"></i>高级搜索
 			</button>
 		</p>
-		
+
 		<div class="collapse table-responsive box-shadow-delayed py-3 px-2" id="collapseExample">
 	  		<table style="width:90%;" class="table table-noborder table-sm m-auto">
 			    <tr>
 					<td width="8%" align="center">
 					<div class="form-radio">
 						<label class="form-check-label">
-						<input type="radio" class="form-check-input" name="search_type" id="admin_" value="radiobutton"> Admin
+						<input type="radio" class="form-check-input" name="search_type" id="admin_" value="radiobutton"> 管理员
 						</label>
 					</div>
 			        <td width="66%">
@@ -20,14 +20,14 @@
 							{foreach from="$admin_list" item="admin}
 								<option label="{$admin.user}" value="{$admin.aid}">{$admin.user}</option>
 							{/foreach}
-						</select>    
+						</select>
 					</td>
 				</tr>
 				 <tr>
 					<td align="center">
 					<div class="form-radio">
 						<label class="form-check-label">
-						<input type="radio" class="form-check-input" name="search_type" id="message_" value="radiobutton"> Message
+						<input type="radio" class="form-check-input" name="search_type" id="message_" value="radiobutton"> 信息
 						</label>
 					</div>
 					</td>
@@ -37,7 +37,7 @@
 			        <td align="center">
 					<div class="form-radio">
 						<label class="form-check-label">
-						<input type="radio" class="form-check-input" name="search_type" id="date_" value="radiobutton"> Date
+						<input type="radio" class="form-check-input" name="search_type" id="date_" value="radiobutton"> 日期
 						</label>
 					</div>
 					</td>
@@ -55,15 +55,15 @@
 			        <td align="center">
 					<div class="form-radio">
 						<label class="form-check-label">
-						<input type="radio" class="form-check-input" name="search_type" id="type_" value="radiobutton"> Type
+						<input type="radio" class="form-check-input" name="search_type" id="type_" value="radiobutton"> 种类
 						</label>
 					</div>
 					</td>
 			        <td>
 						<select class="form-control" id="type" onmouseup="$('type_').checked = true" style="width: 100%;">
-							<option label="Message" value="m">Message</option>
-							<option label="Warning" value="w">Warning</option>
-							<option label="Error" value="e">Error</option>
+							<option label="Message" value="m">信息</option>
+							<option label="Warning" value="w">警告</option>
+							<option label="Error" value="e">错误</option>
 						</select>
 					</td>
 			    </tr>

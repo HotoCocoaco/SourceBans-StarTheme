@@ -18,38 +18,38 @@
 <script type="text/javascript">
 	var t="<i class=\"menu-icon mdi mdi-";
 	var e =document.getElementById("adminlinkfix").getElementsByTagName("img")[0];
-	
+
 	if(e.src.indexOf("admins")!=-1)
 	{
-		t+="account\"></i>Admin Settings";
+		t+="account\"></i>管理员设置";
 	}else if(e.src.indexOf("servers")!=-1)
 	{
-		t+="server\"></i>Server Settings";
+		t+="server\"></i>服务器设置";
 	}else if(e.src.indexOf("bans")!=-1)
 	{
-		t+="do-not-disturb\"></i>Bans";
+		t+="do-not-disturb\"></i>封禁";
 	}else if(e.src.indexOf("comms")!=-1)
 	{
-		t+="microphone-off\"></i>Comms";
+		t+="microphone-off\"></i>交流控制";
 	}else if(e.src.indexOf("groups")!=-1)
 	{
-		t+="account-multiple\"></i>Group Settings";
+		t+="account-multiple\"></i>组设置";
 	}else if(e.src.indexOf("settings")!=-1)
 	{
-		t+="settings\"></i>Webpanel Settings";
+		t+="settings\"></i>网页面板设置";
 	}else if(e.src.indexOf("mods")!=-1)
 	{
-		t+="tune\"></i>Manage Mods";
+		t+="tune\"></i>管理Mods";
 	}else if(e.src.indexOf("your_account")!=-1)
 	{
-		t+="account-card-details\"></i>Your Account";
+		t+="account-card-details\"></i>你的账号";
 	}
 	e.parentNode.innerHTML=t;
-	
+
 	//unknown double link fix
 	if(document.getElementsByClassName("doublefix").length>1)
 		document.getElementsByClassName("doublefix")[1].remove();
-	
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })

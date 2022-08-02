@@ -4,7 +4,7 @@
 			<div class="col-lg-12 grid-margin">
 				<div class="card">
 					<div class="card-body" id="add-group">
-						<h3>Admin Groups</h3>
+						<h3>管理员组</h3>
 						<p>For more information or help regarding a certain subject move your mouse over the question mark.<br /><br />
 							Choose the new groups that you want <b>{$group_admin_name}</b> to appear in.
 						</p>
@@ -35,7 +35,7 @@
 								<tr>
 									<td valign="middle">
 										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Choose the group you want this admin to appear in for server admin permissions"></i>
-										Server Admin Group 
+										Server Admin Group
 									</td>
 									<td>
 										<div align="left" id="wadmingroup">

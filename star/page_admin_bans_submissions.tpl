@@ -5,8 +5,8 @@ Access Denied!
 	<div class="col-lg-12 grid-margin">
 		<div class="card">
 			<div class="card-body" id="add-group1">
-				<h3>Ban Submissions  <i class="btn btn-outline-primary btn-rounded btn-fw" style="height:20px;padding:0px 10px;line-height:18px;">Total Submissions:{$submission_count}</i></h3>
-				<p>Click a player's nickname to view information about their submission</p>
+				<h3>封禁提交  <i class="btn btn-outline-primary btn-rounded btn-fw" style="height:20px;padding:0px 10px;line-height:18px;">总提交:{$submission_count}</i></h3>
+				<p>单击玩家的昵称以查看有关其提交的信息</p>
 				<br /><br />
 				<div class="table-responsive">
 					<div class="col-12 my-2 text-xl-right text-lg-left">
@@ -17,9 +17,9 @@ Access Denied!
 					<table class="table">
 						<thead>
 							<tr>
-								<th>Nickname</th>
+								<th>昵称</th>
 								<th>SteamID</th>
-								<th>Action</th>
+								<th>行动</th>
 							</tr>
 						</thead>
 						{foreach from="$submission_list" item="sub"}
@@ -27,12 +27,12 @@ Access Denied!
 						{if $sub.hostname == ""}onclick="xajax_ServerHostPlayers('{$sub.server}', 'id', 'sub{$sub.subid}');"{/if} >
 						<td class="listtable_1" height='16'>{$sub.name}</td>
 						<td class="listtable_1" height='16'>{if $sub.SteamId!=""}{$sub.SteamId}{else}{$sub.sip}{/if}</td>
-						<td class="listtable_1" height='16'> 
-							<a href="#" onclick="xajax_SetupBan({$sub.subid});return false;">Ban</a> - 
+						<td class="listtable_1" height='16'>
+							<a href="#" onclick="xajax_SetupBan({$sub.subid});return false;">封禁</a> -
 							{if $permissions_editsub}
-							<a href="#" onclick="RemoveSubmission({$sub.subid}, '{$sub.name|stripslashes|stripquotes}', '1');return false;">Remove</a> -
+							<a href="#" onclick="RemoveSubmission({$sub.subid}, '{$sub.name|stripslashes|stripquotes}', '1');return false;">移除</a> -
 							{/if}
-							<a href="index.php?p=admin&c=bans&o=email&type=s&id={$sub.subid}">Contact</a>
+							<a href="index.php?p=admin&c=bans&o=email&type=s&id={$sub.subid}">联系</a>
 						</td>
 						</tr>
 						<tr id="pid_{$sub.subid}a" >
@@ -41,11 +41,11 @@ Access Denied!
 									<table class="table tbl-sm" width="100%">
 										<tr>
 											<td height="16" align="left" class="listtable_top" colspan="3">
-												<b>Ban Details</b>            
+												<b>封禁细节</b>
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16" class="listtable_1">Player</td>
+											<td width="20%" height="16" class="listtable_1">玩家</td>
 											<td height="16" class="listtable_1">{$sub.name}</td>
 											<td width="30%" rowspan="9" class="listtable_2">
 												<div class="ban-edit">
@@ -64,7 +64,7 @@ Access Denied!
 											<td width="20%" height="16" class="listtable_1">SteamID</td>
 											<td height="16" class="listtable_1">
 												{if $sub.SteamId == ""}
-												<i><font color="#677882">no steamid present</font></i>
+												<i><font color="#677882">无SteamID</font></i>
 												{else}
 												{$sub.SteamId}
 												{/if}
@@ -74,40 +74,40 @@ Access Denied!
 											<td width="20%" height="16" class="listtable_1">IP</td>
 											<td height="16" class="listtable_1">
 												{if $sub.sip == ""}
-												<i><font color="#677882">no ip address present</font></i>
+												<i><font color="#677882">无IP地址</font></i>
 												{else}
 												{$sub.sip}
 												{/if}
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16" class="listtable_1">Reason</td>
+											<td width="20%" height="16" class="listtable_1">原因</td>
 											<td height="" class="listtable_1">{$sub.reason}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16" class="listtable_1">Server</td>
-											<td height="" class="listtable_1" id="sub{$sub.subid}">{if $sub.hostname == ""}<i>Retrieving Hostname</i>{else}{$sub.hostname}{/if}</td>
+											<td width="20%" height="16" class="listtable_1">服务器</td>
+											<td height="" class="listtable_1" id="sub{$sub.subid}">{if $sub.hostname == ""}<i>获取主机名</i>{else}{$sub.hostname}{/if}</td>
 										</tr>
 										<tr align="left">
 											<td width="20%" height="16" class="listtable_1">MOD</td>
 											<td height="" class="listtable_1">{$sub.mod}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16" class="listtable_1">Submitter Name</td>
+											<td width="20%" height="16" class="listtable_1">提交者名字</td>
 											<td height="" class="listtable_1">
 												{if $sub.subname == ""}
-												<i><font color="#677882">no name present</font></i>
+												<i><font color="#677882">无名字</font></i>
 												{else}
 												{$sub.subname}
 												{/if}
 											</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16" class="listtable_1">Submitter IP</td>
+											<td width="20%" height="16" class="listtable_1">提交者 IP</td>
 											<td height="" class="listtable_1">{$sub.ip}</td>
 										</tr>
 										<tr align="left">
-											<td width="20%" height="16" class="listtable_1">Comments</td>
+											<td width="20%" height="16" class="listtable_1">评论</td>
 											<td height="60" class="listtable_1" colspan="3">
 												{if $sub.commentdata != "None"}
 												<table width="100%" border="0">
@@ -124,7 +124,7 @@ Access Denied!
 															{if !empty($commenta.comname)}
 															<b>{$commenta.comname|escape:'html'}</b>
 															{else}
-															<i><font color="#677882">Admin deleted</font></i>
+															<i><font color="#677882">管理员已删除</font></i>
 															{/if}
 														</td>
 														<td align="right"><b>{$commenta.added}</b>
@@ -143,7 +143,7 @@ Access Denied!
 													{if !empty($commenta.edittime)}
 													<tr>
 														<td colspan="3">
-															<span style="font-size:6pt;color:grey;">last edit {$commenta.edittime} by {if !empty($commenta.editname)}{$commenta.editname}{else}<i><font color="#677882">Admin deleted</font></i>{/if}</span>
+															<span style="font-size:6pt;color:grey;">最后编辑于 {$commenta.edittime} 由 {if !empty($commenta.editname)}{$commenta.editname}{else}<i><font color="#677882">管理员已删除</font></i>{/if}</span>
 														</td>
 													</tr>
 													{/if}

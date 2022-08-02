@@ -4,13 +4,13 @@
 			<div class="col-lg-12 grid-margin">
 				<div class="card">
 					<div class="card-body" id="add-group">
-						<h3>Admin Details</h3>
+						<h3>管理员详情</h3>
 						<div class="table-responsive">
 							<table id="group.details" class="table table-striped">
 								<tr>
 									<td valign="top">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="This is the username the admin will use to login-to their admin panel. Also this will identify the admin on any bans they make."></i>
-										Admin Login 
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="这是管理员用于登录其管理面板的用户名。 这也将识别管理员对他们所做的任何禁令。"></i>
+										管理员登录
 									</td>
 									<td>
 										<div align="left">
@@ -21,8 +21,8 @@
 								</tr>
 								<tr>
 									<td valign="top">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="This is the admins 'STEAM' id. This must be set so that admins can use their admin rights ingame."></i>
-										Admin STEAM ID
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="这是管理员的“STEAM”ID。 必须设置此项，以便管理员可以在游戏中使用他们的管理员权限。"></i>
+										管理员 STEAM ID
 									</td>
 									<td>
 										<div align="left">
@@ -33,8 +33,8 @@
 								</tr>
 								<tr>
 									<td valign="top">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Set the admins e-mail address. This will be used for sending out any automated messages from the system, and for use when you forget your password."></i>
-										Admin Email
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="设置管理员电子邮件地址。 这将用于从系统发送任何自动消息，并在您忘记密码时使用。"></i>
+										管理员电子邮箱
 									</td>
 									<td>
 										<div align="left">
@@ -46,8 +46,8 @@
 								{if $change_pass}
 								<tr>
 									<td valign="top">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="The password the admin will need to access the admin panel."></i>
-										Admin Password
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="管理员访问管理面板所需的密码。"></i>
+										管理员密码
 									</td>
 									<td>
 										<div align="left">
@@ -58,8 +58,8 @@
 								</tr>
 								<tr>
 									<td valign="top">
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="Type your password again to confirm."></i>
-										Admin Password (confirm)
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="再次输入您的密码以确认。"></i>
+										管理员密码（确认）
 									</td>
 									<td>
 										<div align="left">
@@ -70,8 +70,8 @@
 								</tr>
 								<tr>
 									<td valign="top" >
-										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="If this box is checked, you will need to specify this password in the game server before you can use your admin rights."></i>
-										Server Password <small>(<a href="http://wiki.alliedmods.net/Adding_Admins_%28SourceMod%29#Passwords" title="SourceMod Password Info" target="_blank">More</a>)</small>
+										<i class="text-primary mdi mdi-help-circle" data-toggle="tooltip" data-placement="bottom" title="如果选中此框，您将需要在游戏服务器中指定此密码，然后才能使用您的管理员权限。"></i>
+										服务器密码 <small>(<a href="http://wiki.alliedmods.net/Adding_Admins_%28SourceMod%29#Passwords" title="SourceMod Password Info" target="_blank">更多信息</a>)</small>
 									</td>
 									<td>
 										<div class="row">
@@ -95,9 +95,9 @@
 								<tr>
 									<td>&nbsp;</td>
 									<td>
-										{sb_button text="Save Changes" class="ok" id="editmod" submit=true}
+										{sb_button text="保存更改" class="ok" id="editmod" submit=true}
 										&nbsp;
-										{sb_button text="Back" onclick="history.go(-1)" class="cancel" id="back" submit=false} 
+										{sb_button text="返回" onclick="history.go(-1)" class="cancel" id="back" submit=false}
 									</td>
 								</tr>
 							</table>
