@@ -151,10 +151,10 @@
 							{/if}
 							{if $view_bans}
 							{if strpos($ban.counts, "type_v") != false}
-							<i class="mdi mdi-microphone-off">禁言</i>
+							<i class="mdi mdi-microphone-off">禁语音</i>
 							{/if}
 							{if strpos($ban.counts, "type_c") != false}
-							<i class="mdi mdi-pencil-off">禁语音</i>
+							<i class="mdi mdi-pencil-off">禁聊天</i>
 							{/if}
 							{/if}
 						</td>
